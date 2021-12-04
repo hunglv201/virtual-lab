@@ -178,7 +178,7 @@ html {
     background-image: url(../images/4.svg);
     width: 52%;
     height: 116px;
-    bottom: 30%;
+    bottom: 40%;
     left: 2%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -222,14 +222,14 @@ html {
 /* prepare */
 
 .oj7 {
-    width: 20%;
+    width: 22%;
     left: 30%;
     bottom: 22%;
 }
 
 .oj12 {
     width: 6%;
-    left: 50%;
+    left: 53%;
     bottom: 40%;
 }
 
@@ -283,17 +283,17 @@ html {
 
 .oj8-1 {
     left: 6%;
-    bottom: 39%;
+    top: 40%;
 }
 
 .oj8-2 {
     left: 2%;
-    bottom: 39.5%;
+    top: 39.5%;
 }
 
 .oj8-3 {
     left: -3%;
-    bottom: 39.5%;
+    top: 39.5%;
 }
 
 .oj10 {

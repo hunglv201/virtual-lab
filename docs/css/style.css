@@ -3,7 +3,6 @@ html {
     height: 100%;
     margin: 0;
     background: #0078d07d;
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     overflow: hidden;
 }
 

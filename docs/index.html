@@ -14,17 +14,25 @@
 <!-- body -->
 
 <body>
-    <div class="main-layout">
+    <div id="loading"></div>
+    <div id="main-layout" class="layout-index">
         <img class="in-game person" src="./images/3.svg" />
         <div class="in-game text-intro">
             <Hãy class="text-intro-detail">
                 <b>Chào mừng con đến với phòng thí nghiệm ảo V.L.A!</b><br>Hãy chọn "BẮT ĐẦU" để vào phòng thí nghiệm và khám phá thế giới khoa học cùng Tiến sĩ A nhé!</span>
         </div>
         <div class="in-game start-button">
-            <button class=" button-custom" role="button">  BẮT ĐẦU</button>
+            <button class=" button-custom" role="button" onclick="window.location.href='prepare.html'">  BẮT ĐẦU</button>
         </div>
         <img class="in-game icon-note" src="./images/5.svg" />
     </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("main-layout").style.display = "block";
+        }, 1000);
+    </script>
 
     <script src="js/custom.js"></script>
 </body>

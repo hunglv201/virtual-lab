@@ -3,18 +3,26 @@ html {
     height: 100%;
     margin: 0;
     background-color: azure;
+    overflow: hidden;
 }
 
-.main-layout {
-    background-image: url(../images/2.png);
+#main-layout {
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
+    display: none
 }
 
-.main-layout img {
+#main-layout img {
     cursor: pointer;
+}
+
+
+/* index */
+
+.layout-index {
+    background-image: url(../images/2.png);
 }
 
 .in-game {
@@ -25,6 +33,12 @@ html {
     width: 220px;
     bottom: 30px;
     left: 10%;
+    transition: transform .2s;
+}
+
+.person:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .text-intro {
@@ -37,6 +51,11 @@ html {
     background-size: 100% 100%;
     padding: 32px 10px 0px 10px;
     font-size: 20px;
+    transition: transform .2s;
+}
+
+.text-intro:hover {
+    transform: scale(1.05);
 }
 
 .start-button {
@@ -47,11 +66,186 @@ html {
 .icon-note {
     bottom: 30px;
     right: 30px;
-    width: 60px;
+    width: 50px;
+    transition: transform .2s;
+}
+
+.icon-note:hover {
+    transform: scale(1.15);
+    cursor: pointer;
 }
 
 
-/* CSS */
+/* index */
+
+
+/* prepare */
+
+.layout-prepare {
+    background-image: url(../images/18.png);
+}
+
+
+/* prepare */
+
+.oj7 {
+    width: 20%;
+    left: 30%;
+    bottom: 22%;
+}
+
+.oj12 {
+    width: 6%;
+    left: 50%;
+    bottom: 40%;
+}
+
+.oj14 {
+    width: 17%;
+    left: 55%;
+    bottom: 7%;
+}
+
+.oj13 {
+    background-image: url(../images/13.svg);
+    width: 95px;
+    height: 50px;
+    bottom: 59%;
+    left: 33%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0px 10px 0px 23px;
+    font-size: 30px;
+}
+
+.oj16 {
+    width: 18%;
+    right: 0;
+}
+
+.oj16-1 {
+    bottom: 55%;
+}
+
+.oj16-2 {
+    bottom: 40%;
+}
+
+.oj11 {
+    width: 18%;
+    left: 0;
+    bottom: 68%;
+}
+
+.oj9 {
+    width: 15%;
+    left: 3%;
+    bottom: 59%;
+}
+
+.oj8 {
+    width: 15%;
+    z-index: 2;
+}
+
+.oj8-1 {
+    left: 6%;
+    bottom: 39%;
+}
+
+.oj8-2 {
+    left: 2%;
+    bottom: 39.5%;
+}
+
+.oj8-3 {
+    left: -3%;
+    bottom: 39.5%;
+}
+
+.oj10 {
+    width: 8%;
+    z-index: 2;
+}
+
+.oj10-1 {
+    left: -1%;
+    bottom: 70.5%;
+}
+
+.oj10-2 {
+    left: 5%;
+    bottom: 69.5%;
+}
+
+.oj10-3 {
+    left: 11%;
+    bottom: 69%;
+}
+
+.oj17 {
+    width: 6%;
+    z-index: 2;
+}
+
+.oj17-1 {
+    right: 11%;
+    bottom: 41%;
+}
+
+.oj17-2 {
+    right: 5%;
+    bottom: 41.5%;
+}
+
+.oj17-3 {
+    right: -1%;
+    bottom: 42.4%;
+}
+
+.oj15 {
+    width: 6%;
+    z-index: 2;
+}
+
+.oj15-1 {
+    right: 11%;
+    bottom: 56%;
+}
+
+.oj15-2 {
+    right: 5%;
+    bottom: 56.5%;
+}
+
+.oj15-3 {
+    right: -1%;
+    bottom: 57.4%;
+}
+
+
+/* CSS common */
+
+#loading {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: red blue yellow;
+    animation: spin .6s ease infinite;
+    position: absolute;
+    left: 44%;
+    top: 44%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(359deg)
+    }
+}
 
 .button-custom {
     background-color: #0078d0;

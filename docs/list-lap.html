@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<!-- body -->
+
+<body>
+    <div id="loading"></div>
+    <div class="area">
+        <div id="main-layout" class="layout-list-lap">
+            <img class="in-game oj-scale-choose oj14-slide" src="./images/14.svg" />
+            <div class="list-slides">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="slide-lap" id="slide-lap1">
+                                <img class="in-game oj7-slide" src="./images/7.svg" />
+                                <img class="in-game oj12-slide" src="./images/12.svg" />
+                                <img class="in-game oj19-slide" src="./images/19.png" />
+                                <img class="in-game oj20-slide" src="./images/20.svg" />
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="slide-lap" id="slide-lap2">
+                                <img class="in-game oj7-slide" src="./images/7.svg" />
+                                <img class="in-game oj12-slide" src="./images/12.svg" />
+                                <img class="in-game oj19-slide" src="./images/19.png" />
+                                <img class="in-game oj20-slide" src="./images/20.svg" />
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="slide-lap" id="slide-lap3">
+                                <img class="in-game oj7-slide" src="./images/7.svg" />
+                                <img class="in-game oj12-slide" src="./images/12.svg" />
+                                <img class="in-game oj19-slide" src="./images/19.png" />
+                                <img class="in-game oj20-slide" src="./images/20.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev icon-change-slide" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                        <span class="sr-only icon-change-slide">Previous</span>
+                    </a>
+                    <a class="carousel-control-next icon-change-slide" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("main-layout").style.display = "block";
+        }, 1000);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

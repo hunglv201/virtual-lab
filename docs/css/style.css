@@ -365,6 +365,59 @@ html {
 }
 
 
+/* list lap */
+
+.list-slides {
+    position: absolute;
+    bottom: 21%;
+    width: 100%;
+}
+
+.layout-list-lap {
+    background-image: url(../images/21.png);
+}
+
+.slide-lap {
+    height: 500px;
+}
+
+.icon-change-slide {
+    font-size: 68px;
+    color: #007bff !important;
+}
+
+.oj7-slide {
+    width: 28%;
+    left: 12%;
+    bottom: 0%;
+}
+
+.oj19-slide {
+    width: 36%;
+    left: 52%;
+    bottom: 14%;
+}
+
+.oj14-slide {
+    width: 17%;
+    left: 55%;
+    bottom: 7%;
+    z-index: 2;
+}
+
+.oj20-slide {
+    width: 36%;
+    left: 52%;
+    bottom: 66%;
+}
+
+.oj12-slide {
+    width: 10%;
+    bottom: 40%;
+    left: 40%;
+}
+
+
 /* CSS common */
 
 #loading {

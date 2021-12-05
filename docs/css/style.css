@@ -417,6 +417,18 @@ html {
     left: 40%;
 }
 
+.oj13-slide {
+    background-image: url(../images/13.svg);
+    width: 135px;
+    height: 64px;
+    bottom: 62%;
+    left: 17%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0px 10px 0px 30px;
+    font-size: 30px;
+}
+
 
 /* CSS common */
 

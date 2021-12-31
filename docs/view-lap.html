@@ -22,13 +22,23 @@
         <div class="three"></div>
     </div>
     <div class="area">
-        <div id="main-layout" class="layout-prepare">
+        <div id="main-layout" class="layout-view-lap">
             <div class="layout1">
+                <img class="in-game oj24 oj-scale-choose" src="./images/24.svg" />
+                <img class="in-game oj27 " src="./images/27.svg" />
+                <img class="in-game oj28 " src="./images/28.svg" />
+                <img class="in-game oj25 oj-scale-choose" src="./images/25.png" />
+                <div class="video-test">
+                    <div class="video-1">
+                        <video width="320" height="240" controls> 
+                            <source src="./videos/1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
 
+                <img class="in-game oj29" src="./images/29.svg" />
             </div>
             <div class="layout2">
-                <img class="in-game oj14 oj-scale-choose" src="./images/14.svg" />
-                <img class="in-game oj23 oj-scale-choose" src="./images/23.png" />
             </div>
 
         </div>
@@ -52,22 +62,22 @@
             document.getElementById("main-layout").style.display = "block";
         }, 0);
 
-        $(".oj22").click(function(event) {
+        $(".oj24").click(function(event) {
             event.stopPropagation()
             console.log("zoom")
-            $(".oj23").addClass("o23-zoom")
+            $(".oj29").addClass("oj29-zoom")
             $(".layout1").addClass("layout-opacity")
         })
 
-        $(".oj23").click(function() {
+        $(".oj29").click(function() {
             console.log("hire")
-            $(".oj23").removeClass("o23-zoom")
+            $(".oj29").removeClass("oj29-zoom")
             $(".layout1").removeClass("layout-opacity")
         })
 
         $(".layout1").click(function() {
             console.log("hire")
-            $(".oj23").removeClass("o23-zoom")
+            $(".oj29").removeClass("oj29-zoom")
             $(".layout1").removeClass("layout-opacity")
         })
 

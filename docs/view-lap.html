@@ -24,19 +24,24 @@
     <div class="area">
         <div id="main-layout" class="layout-view-lap">
             <div class="layout1">
-                <img class="in-game oj24 oj-scale-choose" src="./images/24.svg" />
-                <img class="in-game oj27 " src="./images/27.svg" />
-                <img class="in-game oj28 " src="./images/28.svg" />
+                <img class="in-game oj24 oj-scale-choose item-hire" src="./images/24.svg" />
+                <img class="in-game oj27 item-hire" src="./images/27.svg" />
+                <img class="in-game oj28 item-hire" src="./images/28.svg" />
                 <img class="in-game oj25 oj-scale-choose" src="./images/25.png" />
                 <div class="video-test">
                     <div class="video-1">
-                        <video width="320" height="240" controls> 
+                        <div class="menu-video">
+                            <span id="xemvideo">Xem video</span> &nbsp; | &nbsp;
+                            <span id="cauhoi">Câu hỏi</span>
+                        </div>
+                        <video width="95%" height="420" controls class="video-play"> 
                             <source src="./videos/1.mp4" type="video/mp4">
                         </video>
+                        <div class="list-cauhoi">
+                            Câu hỏi
+                        </div>
                     </div>
                 </div>
-
-                <img class="in-game oj29" src="./images/29.svg" />
             </div>
             <div class="layout2">
             </div>
@@ -65,20 +70,34 @@
         $(".oj24").click(function(event) {
             event.stopPropagation()
             console.log("zoom")
-            $(".oj29").addClass("oj29-zoom")
-            $(".layout1").addClass("layout-opacity")
+            $(".video-test").addClass("video-test-show")
+            $(".item-hire").addClass("hire-zoom")
         })
 
         $(".oj29").click(function() {
             console.log("hire")
-            $(".oj29").removeClass("oj29-zoom")
-            $(".layout1").removeClass("layout-opacity")
+            $(".video-test").removeClass("video-test-show")
+            $(".item-hire").removeClass("hire-zoom")
         })
 
         $(".layout1").click(function() {
             console.log("hire")
-            $(".oj29").removeClass("oj29-zoom")
-            $(".layout1").removeClass("layout-opacity")
+            $(".video-test").removeClass("video-test-show")
+            $(".item-hire").removeClass("hire-zoom")
+        })
+
+        $("#xemvideo").click(function(event) {
+            event.stopPropagation()
+            console.log("video")
+            $(".list-cauhoi").removeClass("display-block")
+            $(".video-play").removeClass("display-none")
+        })
+
+        $("#cauhoi").click(function(event) {
+            event.stopPropagation()
+            console.log("cauhoi")
+            $(".list-cauhoi").addClass("display-block")
+            $(".video-play").addClass("display-none")
         })
 
         function goListLap() {

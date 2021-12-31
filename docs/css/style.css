@@ -6,6 +6,14 @@ html {
     overflow: hidden;
 }
 
+.display-none {
+    display: none !important;
+}
+
+.display-block {
+    display: block !important;
+}
+
 .context {
     width: 100%;
     position: absolute;
@@ -473,13 +481,13 @@ html {
 .oj24 {
     width: 15%;
     left: 3%;
-    bottom: 68%;
+    top: 5%;
 }
 
 .oj25 {
     width: 17%;
     left: 55%;
-    bottom: 7%;
+    bottom: 4%;
     z-index: 2;
 }
 
@@ -495,30 +503,55 @@ html {
     bottom: 15%;
 }
 
+.video-test {
+    height: 0%;
+    width: 0%;
+    transition: all .5s;
+    position: absolute;
+}
 
-/* .video-1 {
-    background-image: url(../images/29.svg);
-    width: 100%;
+.video-test-show {
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: 90%;
-} */
+    width: 100%;
+}
 
 .video-1 {
+    width: 100%;
+    height: auto;
     position: absolute;
-    left: 20%;
+    bottom: 24%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.oj29 {
-    z-index: 3;
-    width: 0%;
-    bottom: 15%;
-    left: 3%;
-    transition: all .5s;
+video {
+    margin-left: 2.5%;
 }
 
-.oj29-zoom {
-    width: 94%;
+.hire-zoom {
+    opacity: 0.2
+}
+
+.menu-video {
+    width: 100%;
+    background-color: #228ad6;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.menu-video span {
+    cursor: pointer;
+}
+
+#xemvideo {
+    margin-left: 2%;
+}
+
+#cauhoi {}
+
+.list-cauhoi {
+    display: none;
+    height: 420px;
 }
 
 

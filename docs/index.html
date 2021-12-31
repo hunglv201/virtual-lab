@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <!-- body -->
 
@@ -25,7 +26,7 @@
                 </span>
             </div>
             <div class="in-game start-button">
-                <button class=" button-custom" role="button" onclick="window.location.href='prepare.html'">  BẮT ĐẦU</button>
+                <button class=" button-custom" role="button" onclick="goPrepare()">  BẮT ĐẦU</button>
             </div>
             <img class="in-game icon-note" src="./images/5.svg" />
         </div>
@@ -44,12 +45,25 @@
     </div>
 
     <div id="loading"></div>
+    <div id="loadingGoto">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
 
     <script>
         setTimeout(function() {
             document.getElementById("loading").style.display = "none";
             document.getElementById("main-layout").style.display = "block";
-        }, 1000);
+        }, 0);
+
+        function goPrepare() {
+            $("#main-layout").addClass("layout-opacity-7")
+            $("#loadingGoto").css("display", "flex")
+            setTimeout(function() {
+                window.location.href = 'prepare.html'
+            }, 600)
+        }
     </script>
 
     <script src="js/custom.js"></script>

@@ -486,7 +486,7 @@ html {
 
 .oj25 {
     width: 17%;
-    left: 55%;
+    left: 68%;
     bottom: 4%;
     z-index: 2;
 }
@@ -504,15 +504,15 @@ html {
 }
 
 .video-test {
-    height: 0%;
-    width: 0%;
     transition: all .5s;
     position: absolute;
+    display: none;
 }
 
 .video-test-show {
     height: 100%;
     width: 100%;
+    display: block;
 }
 
 .video-1 {
@@ -533,7 +533,7 @@ video {
 
 .menu-video {
     width: 100%;
-    background-color: #228ad6;
+    background-color: #228ad69e;
     color: white;
     font-size: 20px;
     padding: 10px;
@@ -549,13 +549,97 @@ video {
 
 #cauhoi {}
 
+.tab-choose {
+    background-color: #0078d0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 .list-cauhoi {
     display: none;
     height: 420px;
 }
 
+.cau {
+    margin: 15px 20px 10px 25px;
+}
+
+.hoi {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.oj30 {
+    width: 6%;
+}
+
+.nd {
+    font-size: 20px;
+    border: 1px solid #f5dcdc;
+    background-color: #007bff30;
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.list-da {}
+
+.nhanch {
+    width: 35%;
+    margin-left: 5px;
+}
+
+.nd-da {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content-center {
+    display: flex;
+    align-items: center;
+}
+
+.hoanthanh {
+    text-align: center;
+}
+
+.chon-da {
+    border: 2px solid #5136f4;
+    border-radius: 50%;
+    padding: 1px;
+    transform: scale(1.3);
+}
+
+.show-rs {
+    opacity: 0;
+}
+
+tr td {
+    padding: 8px 0px;
+}
+
+.nhanch {
+    transition: all .2s ease-in-out;
+}
+
+.nhanch:hover {
+    transform: scale(1.3);
+}
+
 
 /* CSS common */
+
+.check {
+    color: green;
+    font-size: 3em;
+}
+
+.ex {
+    color: red;
+    font-weight: bold;
+    font-size: 3em;
+}
 
 #loading {
     width: 100px;

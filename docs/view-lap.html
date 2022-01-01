@@ -8,8 +8,6 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <!-- body -->
@@ -31,14 +29,53 @@
                 <div class="video-test">
                     <div class="video-1">
                         <div class="menu-video">
-                            <span id="xemvideo">Xem video</span> &nbsp; | &nbsp;
+                            <span id="xemvideo" class="tab-choose">Xem video</span> &nbsp; | &nbsp;
                             <span id="cauhoi">Câu hỏi</span>
                         </div>
-                        <video width="95%" height="420" controls class="video-play"> 
+                        <video width="95%" height="420" controls class="video-play" style="margin-bottom: 11px;"> 
                             <source src="./videos/1.mp4" type="video/mp4">
                         </video>
                         <div class="list-cauhoi">
-                            Câu hỏi
+                            <div id="cau1" class="cau">
+                                <div class="hoi">
+                                    <img class="oj30" src="./images/30.svg" />
+                                    <span class="nd">Sau khi xem video, các con hãy cho cô biết: “Tại sao bạn nước lại không còn sạch sẽ và thơm tho nữa?”
+                                    </span>
+                                </div>
+                                <div class="list-da">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr onclick="chooseDA(1)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td><img class="nhanch oj32" src="./images/32.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước nghịch bẩn.</td>
+                                            </tr>
+                                            <tr onclick="chooseDA(2)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td><img class="nhanch oj33" src="./images/33.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước thấy có rất nhiều bạn nước không mang màu xanh
+                                                </td>
+                                            </tr>
+                                            <tr onclick="chooseDA(3)">
+                                                <td><span class="check show-rs">&#x2714;</span></td>
+                                                <td><img class="nhanch oj34" src="./images/34.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước rơi xuống mặt đất, xung quanh bạn nước còn có rất nhiều vụn nilon và cát.
+                                                </td>
+                                            </tr>
+                                            <tr onclick="chooseDA(4)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td><img class="nhanch oj35" src="./images/35.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước không được ở cùng các anh chị của mình.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="hoanthanh" colspan="3"><button class="button-custom" style="font-size: 15px">Hoàn thành</button></td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,7 +117,7 @@
             $(".item-hire").removeClass("hire-zoom")
         })
 
-        $(".layout1").click(function() {
+        $(".hoanthanh").click(function() {
             console.log("hire")
             $(".video-test").removeClass("video-test-show")
             $(".item-hire").removeClass("hire-zoom")
@@ -91,14 +128,22 @@
             console.log("video")
             $(".list-cauhoi").removeClass("display-block")
             $(".video-play").removeClass("display-none")
+            $("#xemvideo").toggleClass("tab-choose")
+            $("#cauhoi").toggleClass("tab-choose")
         })
 
         $("#cauhoi").click(function(event) {
             event.stopPropagation()
+            tabCauhoi()
+        })
+
+        function tabCauhoi() {
+            $("#cauhoi").toggleClass("tab-choose")
+            $("#xemvideo").toggleClass("tab-choose")
             console.log("cauhoi")
             $(".list-cauhoi").addClass("display-block")
             $(".video-play").addClass("display-none")
-        })
+        }
 
         function goListLap() {
             $("#main-layout").addClass("layout-opacity-7")
@@ -107,6 +152,29 @@
                 window.location.href = 'list-lap.html'
             }, 600)
         }
+
+        function chooseDA(da) {
+            console.log("chon da")
+            if (da == 1)
+                $(".oj32").toggleClass("chon-da")
+            if (da == 2)
+                $(".oj33").toggleClass("chon-da")
+            if (da == 3)
+                $(".oj34").toggleClass("chon-da")
+            if (da == 4)
+                $(".oj35").toggleClass("chon-da")
+
+            setTimeout(function() {
+                $(".show-rs").css("opacity", 1);
+            }, 500)
+        }
+
+        var video = document.getElementsByTagName('video')[0];
+        video.onended = function(e) {
+            setTimeout(function() {
+                tabCauhoi()
+            }, 1500)
+        };
     </script>
 </body>
 

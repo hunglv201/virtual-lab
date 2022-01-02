@@ -19,6 +19,8 @@ $(".oj24").click(function(event) {
     $(".item-hire").addClass("hire-zoom")
 })
 
+var daDung = 0;
+
 function xemvideo() {
     console.log("video")
     $(".list-cauhoi").removeClass("display-block")
@@ -40,24 +42,70 @@ function goLap() {
     }, 600)
 }
 
-function chooseDA(da) {
-    console.log("chon da")
-    if (da == 1)
-        $(".oj32").toggleClass("chon-da")
-    if (da == 2)
-        $(".oj33").toggleClass("chon-da")
-    if (da == 3)
-        $(".oj34").toggleClass("chon-da")
-    if (da == 4)
-        $(".oj35").toggleClass("chon-da")
+function chooseDA(causos, da) {
 
-    setTimeout(function() {
-        $(".show-rs").css("opacity", 1);
-    }, 500)
+    if (causos == 1) {
+        if (da == 1)
+            $(".nhanch1-oj32").toggleClass("chon-da")
+        if (da == 2) {
+            daDung = daDung + 1
+            $(".nhanch1-oj33").toggleClass("chon-da")
+        }
+        if (da == 3)
+            $(".nhanch1-oj34").toggleClass("chon-da")
 
-    setTimeout(function() {
-        xemvideo()
-    }, 2000)
+        setTimeout(function() {
+            $(".rs-c1").css("opacity", 1);
+        }, 600)
+
+        setTimeout(function() {
+            $("#cau1").hide()
+            $("#cau2").show()
+        }, 3000)
+    } else if (causos == 2) {
+        if (da == 1)
+            $(".nhanch2-oj32").toggleClass("chon-da")
+        if (da == 2)
+            $(".nhanch2-oj33").toggleClass("chon-da")
+        if (da == 3) {
+            daDung = daDung + 1
+            $(".nhanch2-oj34").toggleClass("chon-da")
+        }
+        if (da == 4)
+            $(".nhanch2-oj35").toggleClass("chon-da")
+
+        setTimeout(function() {
+            $(".rs-c2").css("opacity", 1);
+        }, 600)
+
+        setTimeout(function() {
+            $("#cau2").hide()
+            $("#cau3").show()
+        }, 3000)
+    } else if (causos == 3) {
+        if (da == 1)
+            $(".nhanch3-oj32").toggleClass("chon-da")
+        if (da == 2) {
+            daDung = daDung + 1
+            $(".nhanch3-oj33").toggleClass("chon-da")
+        }
+        if (da == 3)
+            $(".nhanch3-oj34").toggleClass("chon-da")
+        if (da == 4)
+            $(".nhanch3-oj35").toggleClass("chon-da")
+
+        setTimeout(function() {
+            $(".rs-c3").css("opacity", 1);
+        }, 600)
+
+        setTimeout(function() {
+            xemvideo()
+        }, 4000)
+    } else {
+        setTimeout(function() {
+            xemvideo()
+        }, 2000)
+    }
 }
 
 function hoanthanh() {
@@ -90,4 +138,6 @@ video.onended = function(e) {
 function showKq() {
     $(".kq").addClass("display-block")
     $(".video-play").addClass("display-none")
+    $("#sodadung").append(daDung)
+    console.log(daDung)
 }

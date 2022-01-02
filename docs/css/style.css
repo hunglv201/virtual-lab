@@ -597,6 +597,14 @@ video {
     margin: 15px 20px 10px 25px;
 }
 
+#cau2 {
+    display: none;
+}
+
+#cau3 {
+    display: none;
+}
+
 .hoi {
     display: flex;
     margin-bottom: 15px;

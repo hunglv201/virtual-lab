@@ -164,6 +164,13 @@ html {
     transition: transform 0.2s ease 0s;
 }
 
+.oj-choose-pre {
+    cursor: pointer;
+    transform: scale(1.15) translateY(-10px);
+    border-top: 2px solid #f44336;
+    border-radius: 15px;
+}
+
 .oj-scale-choose:hover {
     cursor: pointer;
     transform: scale(1.15) translateY(-10px);

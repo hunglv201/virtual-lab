@@ -9,7 +9,7 @@
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <!-- body -->
@@ -27,15 +27,15 @@
                 <img class="in-game oj7" src="./images/7.svg" onclick="goListLap()" />
 
 
-                <img class="in-game oj8 oj8-1 oj-scale-choose" src="./images/8.svg" />
-                <img class="in-game oj8 oj8-2 oj-scale-choose" src="./images/8.svg" />
-                <img class="in-game oj8 oj8-3 oj-scale-choose" src="./images/8.svg" />
+                <img id="oj8-1" class="in-game oj-choo oj8 oj8-1 oj-scale-choose" src="./images/8.svg" />
+                <img id="oj8-2" class="in-game oj-choo oj8 oj8-2 oj-scale-choose" src="./images/8.svg" />
+                <img id="oj8-3" class="in-game oj-choo oj8 oj8-3 oj-scale-choose" src="./images/8.svg" />
 
                 <img class="in-game oj9" src="./images/9.svg" />
 
-                <img class="in-game oj10 oj10-1 oj-scale-choose" src="./images/10.svg" />
-                <img class="in-game oj10 oj10-2 oj-scale-choose" src="./images/10.svg" />
-                <img class="in-game oj10 oj10-3 oj-scale-choose" src="./images/10.svg" />
+                <img id="oj10-1" class="in-game oj-choo oj10 oj10-1 oj-scale-choose" src="./images/10.svg" />
+                <img id="oj10-2" class="in-game oj-choo oj10 oj10-2 oj-scale-choose" src="./images/10.svg" />
+                <img id="oj10-3" class="in-game oj-choo oj10 oj10-3 oj-scale-choose" src="./images/10.svg" />
 
 
                 <img class="in-game oj11 " src="./images/11.svg" />
@@ -48,16 +48,16 @@
                 </div>
 
 
-                <img class="in-game oj15 oj15-1 oj-scale-choose" src="./images/15.svg" />
-                <img class="in-game oj15 oj15-2 oj-scale-choose" src="./images/15.svg" />
-                <img class="in-game oj15 oj15-3 oj-scale-choose" src="./images/15.svg" />
+                <img id="oj15-1" class="in-game oj-choo oj15 oj15-1 oj-scale-choose" src="./images/15.svg" />
+                <img id="oj15-2" class="in-game oj-choo oj15 oj15-2 oj-scale-choose" src="./images/15.svg" />
+                <img id="oj15-3" class="in-game oj-choo oj15 oj15-3 oj-scale-choose" src="./images/15.svg" />
 
-                <img class="in-game oj16 oj16-1" src="./images/16.svg" />
-                <img class="in-game oj16 oj16-2" src="./images/16.svg" />
+                <img id="oj16-1" class="in-game oj16 oj16-1" src="./images/16.svg" />
+                <img id="oj16-2" class="in-game oj16 oj16-2" src="./images/16.svg" />
 
-                <img class="in-game oj17 oj17-1 oj-scale-choose" src="./images/17.svg" />
-                <img class="in-game oj17 oj17-2 oj-scale-choose" src="./images/17.svg" />
-                <img class="in-game oj17 oj17-3 oj-scale-choose" src="./images/17.svg" />
+                <img id="oj17-1" class="in-game oj-choo oj17 oj17-1 oj-scale-choose" src="./images/17.svg" />
+                <img id="oj17-2" class="in-game oj-choo oj17 oj17-2 oj-scale-choose" src="./images/17.svg" />
+                <img id="oj17-3" class="in-game oj-choo oj17 oj17-3 oj-scale-choose" src="./images/17.svg" />
 
                 <img class="in-game oj22 oj-scale-choose" src="./images/22.png" />
             </div>
@@ -82,6 +82,24 @@
     </div>
 
     <script>
+        $(".oj-choo").click(function(e) {
+            var sy = "#" + e.target.id;
+            $(sy).addClass("oj-choose-pre")
+
+            if (sy.includes("oj8"))
+                $(sy).addClass("oj-choose-pre-8")
+
+            if (sy.includes("oj10"))
+                $(sy).addClass("oj-choose-pre-10")
+
+            if (sy.includes("oj15"))
+                $(sy).addClass("oj-choose-pre-15")
+
+            if (sy.includes("oj17"))
+                $(sy).addClass("oj-choose-pre-17")
+
+        })
+
         setTimeout(function() {
             document.getElementById("loading").style.display = "none";
             document.getElementById("main-layout").style.display = "block";
@@ -107,13 +125,58 @@
         })
 
         function goListLap() {
-            $("#main-layout").addClass("layout-opacity-7")
-            $("#loadingGoto").css("display", "flex")
-            setTimeout(function() {
-                window.location.href = 'list-lap.html'
-            }, 600)
+            var m = "";
+            var cKhautrang = $(".oj-choose-pre-17").length;
+            var cGangtay = $(".oj-choose-pre-15").length;
+            var cKinh = $(".oj-choose-pre-10").length;
+            var cAo = $(".oj-choose-pre-8").length;
+
+            if (cKhautrang == 0) {
+                Toastify({
+                    text: "Chọn khẩu trang",
+                    duration: 1000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    backgroundColor: "red",
+                }).showToast();
+            } else if (cGangtay == 0) {
+                Toastify({
+                    text: "Chọn gang tay",
+                    duration: 1000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    backgroundColor: "red",
+                }).showToast();
+            } else if (cKinh == 0) {
+                Toastify({
+                    text: "Chọn kính",
+                    duration: 1000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    backgroundColor: "red",
+                }).showToast();
+            } else if (cAo == 0) {
+                Toastify({
+                    text: "Chọn áo",
+                    duration: 1000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    backgroundColor: "red",
+                }).showToast();
+            } else {
+                $("#main-layout").addClass("layout-opacity-7")
+                $("#loadingGoto").css("display", "flex")
+                setTimeout(function() {
+                    window.location.href = 'list-lap.html'
+                }, 600)
+            }
         }
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

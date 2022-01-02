@@ -784,6 +784,98 @@ tr td {
 }
 
 
+/* start practice */
+
+.layout-start-practice {
+    background-image: url(../images/39.png);
+}
+
+.oj38 {
+    width: 20%;
+    right: 10px;
+    top: 10px;
+}
+
+.oj40 {
+    width: 20%;
+    left: 60%;
+    bottom: 50%;
+}
+
+.oj41 {
+    width: 15%;
+    left: 0;
+    bottom: 75%;
+}
+
+.tb9-prac {
+    width: 15%;
+    bottom: 29%;
+    left: 6%;
+}
+
+.tb5-prac {
+    width: 15%;
+    bottom: 25%;
+    left: 12%;
+}
+
+.tb4-prac {
+    width: 15%;
+    bottom: 25%;
+    left: 25%;
+}
+
+.tb3-prac {
+    width: 15%;
+    bottom: 28%;
+    left: 38%;
+}
+
+.tb2-prac {
+    width: 15%;
+    bottom: 34%;
+    left: 55%;
+}
+
+.tb1-prac {
+    width: 15%;
+    bottom: 25%;
+    left: 75%;
+}
+
+.tb6-prac {
+    width: 15%;
+    bottom: 20%;
+    left: 75%;
+}
+
+.tb8-prac {
+    width: 15%;
+    bottom: 18%;
+    left: 65%;
+}
+
+.tb10-prac {
+    width: 20%;
+    bottom: 22%;
+    left: 52%;
+}
+
+.button-hoanthanh {
+    position: absolute;
+    top: 12%;
+    right: 10px;
+    border: 1px solid blue;
+    padding: 8px 22px;
+    font-size: 18px;
+    border-radius: 28px;
+    font-weight: 600;
+    background-color: #0000ff;
+    color: white;
+}
+
+
 /* CSS common */
 
 .check {

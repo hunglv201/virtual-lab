@@ -511,6 +511,13 @@ html {
     width: 50%;
     left: 49.5%;
     bottom: 15%;
+    transition: width 1s
+}
+
+.oj28-zoom {
+    left: 0%;
+    width: 100%;
+    bottom: 0%;
 }
 
 .video-test {

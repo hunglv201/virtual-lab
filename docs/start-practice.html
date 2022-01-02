@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<!-- body -->
+
+<body>
+    <div id="loading"></div>
+    <div id="loadingGoto">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <div class="area">
+        <div id="main-layout" class="layout-prepare">
+            <div class="layout1">
+                <img class="in-game oj7" src="./images/7.svg" onclick="goListLap()" />
+
+            </div>
+            <div class="layout2">
+                <img class="in-game oj14 oj-scale-choose" src="./images/14.svg" />
+            </div>
+
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("main-layout").style.display = "block";
+        }, 0);
+
+        function goListLap() {
+            $("#main-layout").addClass("layout-opacity-7")
+            $("#loadingGoto").css("display", "flex")
+            setTimeout(function() {
+                window.location.href = 'list-lap.html'
+            }, 600)
+        }
+    </script>
+</body>
+
+</html>

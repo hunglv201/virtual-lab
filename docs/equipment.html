@@ -114,14 +114,6 @@
 
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
-            Toastify({
-                text: "Đã chọn đủ dụng cụ cho thí nghiệm. Bắt đầu làm thí nghiệm!",
-                duration: 3000,
-                gravity: "top", // `top` or `bottom`
-                position: "center", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                backgroundColor: "#007bff",
-            }).showToast();
         }
 
         function drop(ev) {
@@ -141,7 +133,8 @@
                     position: "center", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
                     backgroundColor: "#007bff",
-                    style: "font-size: 20px"
+                    style: "font-size: 20px",
+                    callback: goPrepareStart()
                 }).showToast();
             }
         }
@@ -151,12 +144,14 @@
             document.getElementById("main-layout").style.display = "block";
         }, 0);
 
-        function goListLap() {
-            $("#main-layout").addClass("layout-opacity-7")
-            $("#loadingGoto").css("display", "flex")
+        function goPrepareStart() {
             setTimeout(function() {
-                window.location.href = 'list-lap.html'
-            }, 600)
+                $("#main-layout").addClass("layout-opacity-7")
+                $("#loadingGoto").css("display", "flex")
+            }, 2000)
+            setTimeout(function() {
+                window.location.href = 'prepare-start.html'
+            }, 4000)
         }
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

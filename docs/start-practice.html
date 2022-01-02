@@ -36,9 +36,12 @@
                 <img class="in-game tb9-prac " src="./images/tb9.png" />
                 <img class="in-game tb10-prac " src="./images/tb10.png" />
 
-                <img class="in-game tb10-prac " src="./images/tb11.svg" />
+                <img class="in-game tb11-prac thungrac " src="./images/tb11.svg" />
+                <img class="in-game tb12-prac thungrac" src="./images/tb12.svg" />
+                <img class="in-game tb13-prac thungrac" src="./images/tb13.svg" />
 
-                <span class="button-hoanthanh oj-scale-choose">  Hoàn thành</span>
+                <span class="button-don-dep " onclick="dondep()">  Thu dọn</span>
+                <span class="button-hoanthanh " onclick="goListLap()">  Hoàn thành</span>
 
             </div>
 
@@ -67,8 +70,12 @@
             $("#main-layout").addClass("layout-opacity-7")
             $("#loadingGoto").css("display", "flex")
             setTimeout(function() {
-                window.location.href = 'list-lap.html'
+                window.location.href = 'rs-test.html'
             }, 600)
+        }
+
+        function dondep() {
+            $(".thungrac").toggleClass("show-thungrac")
         }
     </script>
 </body>

@@ -580,6 +580,12 @@ video {
     height: 420px;
 }
 
+.kq {
+    display: none;
+    height: 420px;
+    text-align: center;
+}
+
 .cau {
     margin: 15px 20px 10px 25px;
 }
@@ -862,7 +868,39 @@ tr td {
     left: 52%;
 }
 
+.tb11-prac {
+    width: 25%;
+    bottom: -15%;
+    left: 5%;
+}
+
+.tb12-prac {
+    width: 25%;
+    bottom: -10%;
+    left: 37%;
+}
+
+.tb13-prac {
+    width: 30%;
+    bottom: -4%;
+    left: 70%;
+}
+
 .button-hoanthanh {
+    position: absolute;
+    top: 18%;
+    right: 10px;
+    border: 1px solid blue;
+    padding: 8px 22px;
+    font-size: 18px;
+    border-radius: 28px;
+    font-weight: 600;
+    background-color: #0000ff;
+    color: white;
+    cursor: pointer;
+}
+
+.button-don-dep {
     position: absolute;
     top: 12%;
     right: 10px;
@@ -873,6 +911,16 @@ tr td {
     font-weight: 600;
     background-color: #0000ff;
     color: white;
+    cursor: pointer;
+}
+
+.thungrac {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.show-thungrac {
+    opacity: 1;
 }
 
 

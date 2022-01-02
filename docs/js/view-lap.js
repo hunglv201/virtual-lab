@@ -3,6 +3,13 @@ setTimeout(function() {
     document.getElementById("main-layout").style.display = "block";
 }, 0);
 
+setTimeout(function() {
+    console.log("zoom")
+    $(".video-test").addClass("video-test-show")
+    $(".item-hire").addClass("hire-zoom")
+    $(".video-play").get(0).play()
+}, 3000)
+
 $(".oj24").click(function(event) {
     event.stopPropagation()
     console.log("zoom")

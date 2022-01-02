@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<!-- body -->
+
+<body>
+    <div id="loading"></div>
+    <div id="loadingGoto">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <div class="area">
+        <div id="main-layout" class="layout-view-lap">
+            <div class="layout1">
+                <img class="in-game oj24 oj-scale-choose item-hire" src="./images/24.svg" />
+                <img class="in-game oj27 item-hire" src="./images/27.svg" />
+                <img class="in-game oj28 item-hire" src="./images/28.svg" />
+                <img class="in-game oj25 oj-scale-choose" src="./images/25.png" />
+                <div class="video-test">
+                    <div class="video-1">
+                        <div class="menu-video">
+                            Bài Kiểm tra
+                        </div>
+                        <video width="95%" height="420" controls class="video-play" style="margin-bottom: 11px;"> 
+                            <source src="./videos/2.mp4" type="video/mp4">
+                        </video>
+                        <div class="list-cauhoi">
+                            <div id="cau1" class="cau">
+                                <div class="hoi">
+                                    <img class="oj30" src="./images/30.svg" />
+                                    <span class="nd">Sau khi xem video, các con hãy cho cô biết: “Tại sao bạn nước lại không còn sạch sẽ và thơm tho nữa?”
+                                    </span>
+                                </div>
+                                <div class="list-da">
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr onclick="chooseDA(1)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td class="lbnhan"><img class="nhanch oj32" src="./images/32.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước nghịch bẩn.</td>
+                                            </tr>
+                                            <tr onclick="chooseDA(2)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td class="lbnhan"><img class="nhanch oj33" src="./images/33.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước thấy có rất nhiều bạn nước không mang màu xanh
+                                                </td>
+                                            </tr>
+                                            <tr onclick="chooseDA(3)">
+                                                <td><span class="check show-rs">&#x2714;</span></td>
+                                                <td class="lbnhan"><img class="nhanch oj34" src="./images/34.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước rơi xuống mặt đất, xung quanh bạn nước còn có rất nhiều vụn nilon và cát.
+                                                </td>
+                                            </tr>
+                                            <tr onclick="chooseDA(4)">
+                                                <td><span class="ex show-rs">&#215;</span></td>
+                                                <td class="lbnhan"><img class="nhanch oj35" src="./images/35.svg" /></td>
+                                                <td class="nd-da">Vì bạn nước không được ở cùng các anh chị của mình.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kq">
+                            <div style="font-size: 30px;padding: 40px 30px;">Trả lời đùng: 1/2</div>
+                            <button class="button-custom" style="font-size: 15px" onclick="goLap()">Hoàn thành</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout2">
+            </div>
+
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+    </script>
+    <script type="text/javascript" src="./js/rs-test.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

@@ -28,64 +28,64 @@
                 <img class="in-game oj37 oj37-2" src="./images/37.png" />
                 <img class="in-game oj37 oj37-3" src="./images/37.png" />
 
-                <div class="arr1">
-                    <img class=" ojtb1 ojtb1-1" src="./images/tb1.png" />
-                    <img class=" ojtb1 ojtb1-1" src="./images/tb1.png" />
-                    <img class=" ojtb1 ojtb1-1" src="./images/tb1.png" />
-                    <img class=" ojtb1 ojtb1-1" src="./images/tb1.png" />
-                    <img class="ojtb3 ojtb3-1" src="./images/tb3.png" />
-                    <img class=" ojtb3 ojtb3-1" src="./images/tb3.png" />
+                <div class="arr arr1">
+                    <img id="obtb1-1" class=" ojtb1 ojtb1-1" src="./images/tb1.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb1-2" class=" ojtb1 ojtb1-1" src="./images/tb1.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb1-3" class=" ojtb1 ojtb1-1" src="./images/tb1.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb1-4" class=" ojtb1 ojtb1-1" src="./images/tb1.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb3-1" class="ojtb3 ojtb3-1" src="./images/tb3.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb3-2" class=" ojtb3 ojtb3-1" src="./images/tb3.png" draggable="true" ondragstart="drag(event)" />
                 </div>
 
-                <div class="arr2">
-                    <img class="ojtb2 ojtb2-1" src="./images/tb2.png" />
-                    <img class=" ojtb2 ojtb2-1" src="./images/tb2.png" />
-                    <img class=" ojtb2 ojtb2-1" src="./images/tb2.png" />
-                    <img class=" ojtb2 ojtb2-1" src="./images/tb2.png" />
-                    <img class=" ojtb4 ojtb4-1" src="./images/tb4.png" />
-                    <img class="ojtb4 ojtb4-1" src="./images/tb4.png" />
-                    <img class="ojtb4 ojtb4-1" src="./images/tb4.png" />
+                <div class="arr arr2">
+                    <img id="obtb2-1" class="ojtb2 ojtb2-1" src="./images/tb2.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb2-2" class=" ojtb2 ojtb2-1" src="./images/tb2.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb2-3" class=" ojtb2 ojtb2-1" src="./images/tb2.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb2-4" class=" ojtb2 ojtb2-1" src="./images/tb2.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb4-1" class=" ojtb4 ojtb4-1" src="./images/tb4.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb4-2" class="ojtb4 ojtb4-1" src="./images/tb4.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb4-3" class="ojtb4 ojtb4-1" src="./images/tb4.png" draggable="true" ondragstart="drag(event)" />
                 </div>
 
-                <div class="arr3">
-                    <img class="ojtb5 ojtb5-1" src="./images/tb5.png" />
-                    <img class=" ojtb6 ojtb6-1" src="./images/tb6.png" />
-                    <img class=" ojtb7 ojtb7-1" src="./images/tb7.png" />
-                    <img class=" ojtb8 ojtb8-1" src="./images/tb8.png" />
+                <div class="arr arr3">
+                    <img id="obtb5-1" class="ojtb5 ojtb5-1" src="./images/tb5.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb6-1" class=" ojtb6 ojtb6-1" src="./images/tb6.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb7-1" class=" ojtb7 ojtb7-1" src="./images/tb7.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb8-1" class=" ojtb8 ojtb8-1" src="./images/tb8.png" draggable="true" ondragstart="drag(event)" />
                 </div>
 
-                <div class="sd-chon">
+                <div class="sd-chon" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 1</div>
+                        <div class="box-item-img content-center" id="objtb1-chon"> <img id="obtb1-choose" class="obtb-choose display-none" src="./images/tb1.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 2</div>
+                        <div class="box-item-img content-center" id="objtb2-chon"> <img id="obtb2-choose" class="obtb-choose display-none" src="./images/tb2.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 3</div>
+                        <div class="box-item-img content-center" id="objtb3-chon"> <img id="obtb3-choose" class="obtb-choose display-none" src="./images/tb3.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 4</div>
+                        <div class="box-item-img content-center" id="objtb4-chon"> <img id="obtb4-choose" class="obtb-choose display-none" src="./images/tb4.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 5</div>
+                        <div class="box-item-img content-center" id="objtb5-chon"> <img id="obtb5-choose" class="obtb-choose display-none" src="./images/tb5.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 6</div>
+                        <div class="box-item-img content-center" id="objtb6-chon"> <img id="obtb6-choose" class="obtb-choose display-none" src="./images/tb6.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
 
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 7</div>
+                        <div class="box-item-img content-center" id="objtb7-chon"> <img id="obtb7-choose" class="obtb-choose display-none" src="./images/tb7.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img"> 8</div>
+                        <div class="box-item-img content-center" id="objtb8-chon"> <img id="obtb8-choose" class="obtb-choose display-none" src="./images/tb8.png"></div>
                         <div class="box-item-label">Lọc nước</div>
                     </div>
                     <div class="man"><img class=" ojHd oj-scale-choose" src="./images/25.png" /></div>
@@ -108,6 +108,44 @@
     </div>
 
     <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            Toastify({
+                text: "Đã chọn đủ dụng cụ cho thí nghiệm. Bắt đầu làm thí nghiệm!",
+                duration: 3000,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                backgroundColor: "#007bff",
+            }).showToast();
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = "#" + ev.dataTransfer.getData("text");
+            $(data).css("visibility", "hidden");
+            var idnew = "#" + data.substring(1, data.indexOf("-")) + "-choose";
+            $(idnew).removeClass("display-none")
+
+            var count = $(".display-none").length;
+            console.log(count)
+            if (count == 0) {
+                Toastify({
+                    text: "Đã chọn đủ dụng cụ cho thí nghiệm. Bắt đầu làm thí nghiệm!",
+                    duration: 3000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "center", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    backgroundColor: "#007bff",
+                    style: "font-size: 20px"
+                }).showToast();
+            }
+        }
+
         setTimeout(function() {
             document.getElementById("loading").style.display = "none";
             document.getElementById("main-layout").style.display = "block";

@@ -615,6 +615,7 @@ video {
 .content-center {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hoanthanh {
@@ -706,6 +707,10 @@ tr td {
     right: 0;
 }
 
+.arr img {
+    cursor: move !important;
+}
+
 .arr1 {
     position: absolute;
     left: 10%;
@@ -765,6 +770,10 @@ tr td {
 .ojtb8 {
     float: left;
     width: 16%;
+}
+
+.obtb-choose {
+    width: 60px
 }
 
 

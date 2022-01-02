@@ -152,6 +152,8 @@ html {
     z-index: 2;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     overflow: hidden;
+    border: 2px solid #0000ff8f;
+    border-radius: 8px;
 }
 
 #main-layout img {
@@ -702,6 +704,67 @@ tr td {
     width: 100%;
     bottom: 0;
     right: 0;
+}
+
+.arr1 {
+    position: absolute;
+    left: 10%;
+    bottom: 78%;
+    width: 80%
+}
+
+.arr2 {
+    position: absolute;
+    left: 10%;
+    bottom: 56%;
+    width: 80%
+}
+
+.arr3 {
+    position: absolute;
+    left: 10%;
+    bottom: 38%;
+    width: 80%
+}
+
+.ojtb1 {
+    float: left;
+    width: 10%;
+}
+
+.ojtb2 {
+    float: left;
+    width: 12%;
+}
+
+.ojtb3 {
+    float: right;
+    width: 12%;
+}
+
+.ojtb4 {
+    float: right;
+    width: 12%;
+}
+
+.ojtb5 {
+    float: left;
+    width: 16%;
+}
+
+.ojtb6 {
+    float: left;
+    width: 16%;
+}
+
+.ojtb7 {
+    float: left;
+    width: 16%;
+}
+
+.ojtb8 {
+    float: left;
+    width: 16%;
 }
 
 

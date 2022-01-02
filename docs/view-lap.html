@@ -8,6 +8,7 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <!-- body -->
@@ -47,24 +48,24 @@
                                         <tbody>
                                             <tr onclick="chooseDA(1)">
                                                 <td><span class="ex show-rs">&#215;</span></td>
-                                                <td><img class="nhanch oj32" src="./images/32.svg" /></td>
+                                                <td class="lbnhan"><img class="nhanch oj32" src="./images/32.svg" /></td>
                                                 <td class="nd-da">Vì bạn nước nghịch bẩn.</td>
                                             </tr>
                                             <tr onclick="chooseDA(2)">
                                                 <td><span class="ex show-rs">&#215;</span></td>
-                                                <td><img class="nhanch oj33" src="./images/33.svg" /></td>
+                                                <td class="lbnhan"><img class="nhanch oj33" src="./images/33.svg" /></td>
                                                 <td class="nd-da">Vì bạn nước thấy có rất nhiều bạn nước không mang màu xanh
                                                 </td>
                                             </tr>
                                             <tr onclick="chooseDA(3)">
                                                 <td><span class="check show-rs">&#x2714;</span></td>
-                                                <td><img class="nhanch oj34" src="./images/34.svg" /></td>
+                                                <td class="lbnhan"><img class="nhanch oj34" src="./images/34.svg" /></td>
                                                 <td class="nd-da">Vì bạn nước rơi xuống mặt đất, xung quanh bạn nước còn có rất nhiều vụn nilon và cát.
                                                 </td>
                                             </tr>
                                             <tr onclick="chooseDA(4)">
                                                 <td><span class="ex show-rs">&#215;</span></td>
-                                                <td><img class="nhanch oj35" src="./images/35.svg" /></td>
+                                                <td class="lbnhan"><img class="nhanch oj35" src="./images/35.svg" /></td>
                                                 <td class="nd-da">Vì bạn nước không được ở cùng các anh chị của mình.
                                                 </td>
                                             </tr>
@@ -99,83 +100,9 @@
     </div>
 
     <script>
-        setTimeout(function() {
-            document.getElementById("loading").style.display = "none";
-            document.getElementById("main-layout").style.display = "block";
-        }, 0);
-
-        $(".oj24").click(function(event) {
-            event.stopPropagation()
-            console.log("zoom")
-            $(".video-test").addClass("video-test-show")
-            $(".item-hire").addClass("hire-zoom")
-        })
-
-        $(".oj29").click(function() {
-            console.log("hire")
-            $(".video-test").removeClass("video-test-show")
-            $(".item-hire").removeClass("hire-zoom")
-        })
-
-        $(".hoanthanh").click(function() {
-            console.log("hire")
-            $(".video-test").removeClass("video-test-show")
-            $(".item-hire").removeClass("hire-zoom")
-        })
-
-        $("#xemvideo").click(function(event) {
-            event.stopPropagation()
-            console.log("video")
-            $(".list-cauhoi").removeClass("display-block")
-            $(".video-play").removeClass("display-none")
-            $("#xemvideo").toggleClass("tab-choose")
-            $("#cauhoi").toggleClass("tab-choose")
-        })
-
-        $("#cauhoi").click(function(event) {
-            event.stopPropagation()
-            tabCauhoi()
-        })
-
-        function tabCauhoi() {
-            $("#cauhoi").toggleClass("tab-choose")
-            $("#xemvideo").toggleClass("tab-choose")
-            console.log("cauhoi")
-            $(".list-cauhoi").addClass("display-block")
-            $(".video-play").addClass("display-none")
-        }
-
-        function goListLap() {
-            $("#main-layout").addClass("layout-opacity-7")
-            $("#loadingGoto").css("display", "flex")
-            setTimeout(function() {
-                window.location.href = 'list-lap.html'
-            }, 600)
-        }
-
-        function chooseDA(da) {
-            console.log("chon da")
-            if (da == 1)
-                $(".oj32").toggleClass("chon-da")
-            if (da == 2)
-                $(".oj33").toggleClass("chon-da")
-            if (da == 3)
-                $(".oj34").toggleClass("chon-da")
-            if (da == 4)
-                $(".oj35").toggleClass("chon-da")
-
-            setTimeout(function() {
-                $(".show-rs").css("opacity", 1);
-            }, 500)
-        }
-
-        var video = document.getElementsByTagName('video')[0];
-        video.onended = function(e) {
-            setTimeout(function() {
-                tabCauhoi()
-            }, 1500)
-        };
     </script>
+    <script type="text/javascript" src="./js/view-lap.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

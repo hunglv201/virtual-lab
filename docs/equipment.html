@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<!-- body -->
+
+<body>
+    <div id="loading"></div>
+    <div id="loadingGoto">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <div class="area">
+        <div id="main-layout" class="layout-equipment">
+            <div class="layout1">
+                <img class="in-game oj37 oj37-1" src="./images/37.png" />
+
+                <img class="in-game oj37 oj37-2" src="./images/37.png" />
+                <img class="in-game oj37 oj37-3" src="./images/37.png" />
+
+                <img class="in-game ojtb1 ojtb1-1" src="./images/tb1.png" />
+                <img class="in-game ojtb2 ojtb2-1" src="./images/tb1.png" />
+                <img class="in-game ojtb3 ojtb3-1" src="./images/tb1.png" />
+                <img class="in-game ojtb4 ojtb4-1" src="./images/tb1.png" />
+
+                <div class="sd-chon">
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 1</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 2</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 3</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 4</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 5</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 6</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 7</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img"> 8</div>
+                        <div class="box-item-label">Lọc nước</div>
+                    </div>
+                    <div class="man"><img class=" ojHd oj-scale-choose" src="./images/25.png" /></div>
+                </div>
+            </div>
+
+        </div>
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("main-layout").style.display = "block";
+        }, 0);
+
+        function goListLap() {
+            $("#main-layout").addClass("layout-opacity-7")
+            $("#loadingGoto").css("display", "flex")
+            setTimeout(function() {
+                window.location.href = 'list-lap.html'
+            }, 600)
+        }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

@@ -188,7 +188,7 @@ html {
 }
 
 .person {
-    width: 200px;
+    width: 20%;
     bottom: 30px;
     left: 10%;
     transition: transform .2s;
@@ -197,6 +197,12 @@ html {
 .person:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.oj4 {
+    width: 50%;
+    bottom: 37%;
+    left: 2%;
 }
 
 .text-intro {
@@ -270,15 +276,9 @@ html {
 }
 
 .oj13 {
-    background-image: url(../images/13.svg);
-    width: 95px;
-    height: 50px;
-    bottom: 59%;
+    width: 15%;
+    bottom: 56%;
     left: 33%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 0px 10px 0px 23px;
-    font-size: 30px;
 }
 
 .oj16 {

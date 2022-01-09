@@ -89,6 +89,7 @@
                 step++;
             } else {
                 $(".than-hoat-tinh").toggleClass("chon-sai")
+                themNote("Ý tưởng hay đấy! Nhưng con chỉ nên sử dụng than hoạt tính để khử màu cho nước khi không còn các tạp chất bẩn như đá và cát ở trong nước nữa. Con hãy nghĩ cách loại bỏ các chất bẩn ra khỏi nước nhé.")
                 setTimeout(function() {
                     $(".than-hoat-tinh").toggleClass("chon-sai")
                 }, 1200)
@@ -129,7 +130,7 @@
                 if (step == 9) {
                     console.log("hoan thanh ----------------------")
                     setTimeout(function() {
-                        $(".note").text("Thi nghiệm hoàn thành !")
+                        themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
                         $(".dungcu").css("opacity", "0")
                         $(".hp").css("display", "block")
                         $(".button-don-dep").css("display", "block")
@@ -156,6 +157,9 @@
         function datray() {
             if (step == 1 || step == 7) {
                 $(".ray").toggleClass("ray-binh")
+                if (step == 1) {
+                    themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé")
+                }
                 step++;
             } else {
                 $(".ray").toggleClass("chon-sai")
@@ -171,11 +175,21 @@
                 step++;
             } else {
                 $(".pheu").toggleClass("chon-sai")
+                themNote("Chỉ có phễu thôi không đủ. Con cần thêm một vật dụng nữa để lọc nước.")
                 setTimeout(function() {
                     $(".pheu").toggleClass("chon-sai")
                 }, 1200)
             }
 
+
+
+        }
+
+        function themNote(note) {
+            $(".note").text(note)
+            setTimeout(function() {
+                $(".note").text("...")
+            }, 5000)
         }
 
         function datloc() {
@@ -184,6 +198,7 @@
                 step++;
             } else {
                 $(".giay-loc").toggleClass("chon-sai")
+                themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.")
                 setTimeout(function() {
                     $(".giay-loc").toggleClass("chon-sai")
                 }, 1200)

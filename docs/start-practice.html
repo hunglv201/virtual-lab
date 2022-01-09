@@ -22,23 +22,24 @@
     <div class="area">
         <div id="main-layout" class="layout-start-practice">
             <div class="layout1">
+                <span class="note">....</span>
                 <img class="in-game oj40 oj-scale-choose" src="./images/40.png" />
                 <img class="in-game oj38 " src="./images/38.png" />
                 <img class="in-game oj41 " src="./images/41.svg" />
+                <img class="in-game hp " src="./images/hp.png" />
 
-                <img class="in-game tb1-prac " src="./images/tb1.png" />
-                <img class="in-game tb2-prac " src="./images/tb2.png" />
-                <img class="in-game tb3-prac " src="./images/tb3.png" />
-                <img class="in-game tb4-prac " src="./images/tb4.png" />
-                <img class="in-game tb5-prac " src="./images/tb5.png" />
-                <img class="in-game tb6-prac " src="./images/tb6.png" />
-                <img class="in-game tb8-prac " src="./images/tb8.png" />
-                <img class="in-game tb9-prac " src="./images/tb9.png" />
-                <img class="in-game tb10-prac " src="./images/tb10.png" />
+                <img class="in-game dungcu binh2 " src="./images/tb9.png" onclick="binh2donuoc()" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game dungcu pheu " src="./images/tb2.png" onclick="datpheu()" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game dungcu giay-loc " src="./images/tb3.png" onclick="datloc()" draggable="true" ondragstart="drag(event)" />
 
-                <img class="in-game tb11-prac thungrac " src="./images/tb11.png" />
-                <img class="in-game tb12-prac thungrac" src="./images/tb12.png" />
-                <img class="in-game tb13-prac thungrac" src="./images/tb13.png" />
+                <img class="in-game dungcu ray " src="./images/tb6.png" onclick="datray()" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game dungcu dua " src="./images/tb8.png" onclick="datdua()" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game dungcu binh1 " src="./images/tb1.png" onclick="binh1donuoc()" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game dungcu than-hoat-tinh " src="./images/tb10.png" onclick="dothanvaobinh()" draggable="true" ondragstart="drag(event)" />
+
+                <img class="in-game tb11-prac thungrac " src="./images/tb11.png" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game tb12-prac thungrac" src="./images/tb12.png" draggable="true" ondragstart="drag(event)" />
+                <img class="in-game tb13-prac thungrac" src="./images/tb13.png" draggable="true" ondragstart="drag(event)" />
 
                 <span class="button-don-dep " onclick="dondep()">  Thu dọn</span>
                 <span class="button-hoanthanh " onclick="goListLap()">  Hoàn thành</span>
@@ -61,10 +62,134 @@
     </div>
 
     <script>
+        var step = 1;
+
+        var stepStatus = "dang" // dodep, xong
+
+        function drag(ev) {
+
+            ev.dataTransfer.setData("text", ev.target.id);
+            console.log(ev.target)
+            ev.target.click()
+            console.log("----------------------------------------------------");
+            console.log("STEP:", step)
+        }
+
         setTimeout(function() {
             document.getElementById("loading").style.display = "none";
             document.getElementById("main-layout").style.display = "block";
         }, 0);
+
+        function dothanvaobinh() {
+            if (step == 6) {
+                $(".than-hoat-tinh").toggleClass("do-than-binh-2")
+                setTimeout(function() {
+                    $(".than-hoat-tinh").toggleClass("do-than-binh-2")
+                }, 8000)
+                step++;
+            } else {
+                $(".than-hoat-tinh").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".than-hoat-tinh").toggleClass("chon-sai")
+                }, 1200)
+            }
+
+        }
+
+        function binh1donuoc() {
+            if (step == 5) {
+                $(".binh1").toggleClass("do-binh-1")
+                setTimeout(function() {
+                    $(".binh1").toggleClass("do-binh-1")
+                    $(".giay-loc").removeClass("loc-binh")
+                    $(".pheu").removeClass("pheu-binh")
+                    $(".binh1").attr("src", "./images/tb1.png")
+                    $(".binh2").attr("src", "./images/tb9.png")
+                }, 8000)
+                step++;
+            } else {
+                $(".binh1").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".binh1").toggleClass("chon-sai")
+                }, 1200)
+            }
+
+        }
+
+        function binh2donuoc() {
+            if (step == 2 || step == 8) {
+                $(".binh2").toggleClass("do-binh-2")
+                setTimeout(function() {
+                    $(".binh2").toggleClass("do-binh-2")
+                    $(".ray").removeClass("ray-binh")
+                    $(".binh1").attr("src", "./images/tb9.png")
+                    $(".binh2").attr("src", "./images/tb1.png")
+                }, 8000)
+                step++;
+                if (step == 9) {
+                    console.log("hoan thanh ----------------------")
+                    setTimeout(function() {
+                        $(".note").text("Thi nghiệm hoàn thành !")
+                        $(".dungcu").css("opacity", "0")
+                        $(".hp").css("display", "block")
+                        $(".button-don-dep").css("display", "block")
+                    }, 9000)
+
+                }
+            } else {
+                $(".binh2").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".binh2").toggleClass("chon-sai")
+                }, 1200)
+            }
+
+        }
+
+        function datdua() {
+
+            $(".dua").toggleClass("chon-sai")
+            setTimeout(function() {
+                $(".dua").toggleClass("chon-sai")
+            }, 1200)
+        }
+
+        function datray() {
+            if (step == 1 || step == 7) {
+                $(".ray").toggleClass("ray-binh")
+                step++;
+            } else {
+                $(".ray").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".ray").toggleClass("chon-sai")
+                }, 1200)
+            }
+        }
+
+        function datpheu() {
+            if (step == 3) {
+                $(".pheu").toggleClass("pheu-binh")
+                step++;
+            } else {
+                $(".pheu").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".pheu").toggleClass("chon-sai")
+                }, 1200)
+            }
+
+        }
+
+        function datloc() {
+            if (step == 4) {
+                $(".giay-loc").toggleClass("loc-binh")
+                step++;
+            } else {
+                $(".giay-loc").toggleClass("chon-sai")
+                setTimeout(function() {
+                    $(".giay-loc").toggleClass("chon-sai")
+                }, 1200)
+            }
+
+        }
 
         function goListLap() {
             $("#main-layout").addClass("layout-opacity-7")
@@ -76,6 +201,11 @@
 
         function dondep() {
             $(".thungrac").toggleClass("show-thungrac")
+            $(".dungcu").css("opacity", "1")
+            $(".hp").css("display", "none")
+
+            $(".button-don-dep").css("display", "none")
+            $(".button-hoanthanh").css("display", "block")
         }
     </script>
 </body>

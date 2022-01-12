@@ -8,6 +8,7 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -41,9 +42,9 @@
                         </div>
                         <div class="carousel-item">
                             <div class="slide-lap" id="slide-lap2">
-                                <img class="in-game oj7-slide" src="./images/7.svg" onclick="goListLap()" />
-                                <img class="in-game oj12-slide" src="./images/12.svg" onclick="goListLap()" />
-                                <img class="in-game oj19-slide" src="./images/19.png" />
+                                <img class="in-game oj7-slide" src="./images/7.svg" onclick="goListLap2()" />
+                                <img class="in-game oj12-slide" src="./images/12.svg" onclick="goListLap2()" />
+                                <img class="in-game oj19-slide" src="./images/19-1.jpg" />
                                 <img class="in-game oj20-slide" src="./images/20-2.svg" />
                                 <div class="in-game oj13-slide">
                                     <span class="oj13-detail">
@@ -53,9 +54,9 @@
                         </div>
                         <div class="carousel-item">
                             <div class="slide-lap" id="slide-lap3">
-                                <img class="in-game oj7-slide" src="./images/7.svg" onclick="goListLap()" />
-                                <img class="in-game oj12-slide" src="./images/12.svg" onclick="goListLap()" />
-                                <img class="in-game oj19-slide" src="./images/19.png" />
+                                <img class="in-game oj7-slide" src="./images/7.svg" onclick="goListLap2()" />
+                                <img class="in-game oj12-slide" src="./images/12.svg" onclick="goListLap2()" />
+                                <img class="in-game oj19-slide" src="./images/19-1.jpg" />
                                 <img class="in-game oj20-slide" src="./images/20-3.svg" />
                                 <div class="in-game oj13-slide">
                                     <span class="oj13-detail">
@@ -95,6 +96,19 @@
             document.getElementById("main-layout").style.display = "block";
         }, 0);
 
+        function goListLap2() {
+            Toastify({
+                text: "!",
+                duration: 1000,
+                gravity: "top", // `top` or `bottom`
+                position: "center", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                backgroundColor: "red",
+            }).showToast();
+        }
+
+
+
         function goListLap() {
             $("#main-layout").addClass("layout-opacity-7")
             $("#loadingGoto").css("display", "flex")
@@ -108,6 +122,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script src="js/custom.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

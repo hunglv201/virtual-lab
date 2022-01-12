@@ -8,7 +8,7 @@ setTimeout(function() {
     $(".video-test").addClass("video-test-show")
     $(".item-hire").addClass("hire-zoom")
     $(".video-play").get(0).play()
-}, 3000)
+}, 1500)
 
 $(".oj24").click(function(event) {
     event.stopPropagation()
@@ -83,15 +83,18 @@ function goEquipment() {
 
 function chooseDA(da) {
     console.log("chon da")
-    if (da == 1)
+    if (da == 1) {
         $(".oj32").toggleClass("chon-da")
-    if (da == 2)
+    }
+    if (da == 2) {
         $(".oj33").toggleClass("chon-da")
-    if (da == 3)
+    }
+    if (da == 3) {
         $(".oj34").toggleClass("chon-da")
-    if (da == 4)
+    }
+    if (da == 4) {
         $(".oj35").toggleClass("chon-da")
-
+    }
     setTimeout(function() {
         $(".show-rs").css("opacity", 1);
     }, 500)

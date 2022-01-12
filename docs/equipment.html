@@ -50,46 +50,42 @@
                 <div class="arr arr3">
                     <img id="obtb5-1" class="ojtb5 ojtb5-1" src="./images/tb5.png" draggable="true" ondragstart="drag(event)" />
                     <img id="obtb6-1" class=" ojtb6 ojtb6-1" src="./images/tb6.png" draggable="true" ondragstart="drag(event)" />
-                    <img id="obtb7-1" class=" ojtb7 ojtb7-1" src="./images/tb7.png" draggable="true" ondragstart="drag(event)" />
+                    <img id="obtb7-1" class=" ojtb7 ojtb7-1" src="./images/tb10.png" draggable="true" ondragstart="drag(event)" />
                     <img id="obtb8-1" class=" ojtb8 ojtb8-1" src="./images/tb8.png" draggable="true" ondragstart="drag(event)" />
                 </div>
 
                 <div class="sd-chon" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div class="box-item oj-scale-choose">
                         <div class="box-item-img content-center" id="objtb1-chon"> <img id="obtb1-choose" class="obtb-choose display-none" src="./images/tb1.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
                     </div>
                     <div class="box-item oj-scale-choose">
                         <div class="box-item-img content-center" id="objtb2-chon"> <img id="obtb2-choose" class="obtb-choose display-none" src="./images/tb2.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
                     </div>
                     <div class="box-item oj-scale-choose">
                         <div class="box-item-img content-center" id="objtb3-chon"> <img id="obtb3-choose" class="obtb-choose display-none" src="./images/tb3.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
-                    </div>
-                    <div class="box-item oj-scale-choose">
-                        <div class="box-item-img content-center" id="objtb4-chon"> <img id="obtb4-choose" class="obtb-choose display-none" src="./images/tb4.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
-                    </div>
-                    <div class="box-item oj-scale-choose">
-                        <div class="box-item-img content-center" id="objtb5-chon"> <img id="obtb5-choose" class="obtb-choose display-none" src="./images/tb5.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
-                    </div>
-                    <div class="box-item oj-scale-choose">
-                        <div class="box-item-img content-center" id="objtb6-chon"> <img id="obtb6-choose" class="obtb-choose display-none" src="./images/tb6.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
                     </div>
 
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img content-center" id="objtb7-chon"> <img id="obtb7-choose" class="obtb-choose display-none" src="./images/tb7.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
+                        <div class="box-item-img content-center" id="objtb5-chon"> <img id="obtb5-choose" class="obtb-choose display-none" src="./images/tb5.png"></div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
                     </div>
                     <div class="box-item oj-scale-choose">
-                        <div class="box-item-img content-center" id="objtb8-chon"> <img id="obtb8-choose" class="obtb-choose display-none" src="./images/tb8.png"></div>
-                        <div class="box-item-label">Lọc nước</div>
+                        <div class="box-item-img content-center" id="objtb6-chon"> <img id="obtb6-choose" class="obtb-choose display-none" src="./images/tb6.png"></div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
                     </div>
+
+                    <div class="box-item oj-scale-choose">
+                        <div class="box-item-img content-center" id="objtb7-chon"> <img id="obtb7-choose" class="obtb-choose display-none" src="./images/tb10.png"></div>
+                        <!-- <div class="box-item-label">Lọc nước</div> -->
+                    </div>
+
                     <div class="man"><img class=" ojHd oj-scale-choose" src="./images/25.png" /></div>
+
                 </div>
+                <div class="note-eqi">Con đã làm quen với tủ vật liệu rồi đấy! Để làm thí nghiệm này, chúng mình cần: <b style="color: #005aff">1 cái cốc, 1 cái rây, 1 cái phễu, 1 cái phễu lọc bằng giấy, 1 cái thìa và than hoạt tính.</b> </div>
             </div>
 
         </div>
@@ -113,7 +109,18 @@
         }
 
         function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
+            if (ev.target.id == "obtb4-1" || ev.target.id == "obtb4-2" || ev.target.id == "obtb4-3" || ev.target.id == "obtb8-1") {
+                var data = "#" + ev.target.id;
+                console.log(data);
+                $(data).addClass("chon-sai-tb");
+                setTimeout(function() {
+                    $(data).removeClass("chon-sai-tb");
+                }, 1000)
+
+            } else {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
         }
 
         function drop(ev) {
@@ -127,7 +134,7 @@
             console.log(count)
             if (count == 0) {
                 Toastify({
-                    text: "Đã chọn đủ dụng cụ cho thí nghiệm. Bắt đầu làm thí nghiệm!",
+                    text: "Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi",
                     duration: 3000,
                     gravity: "top", // `top` or `bottom`
                     position: "center", // `left`, `center` or `right`
@@ -152,6 +159,86 @@
             setTimeout(function() {
                 window.location.href = 'prepare-start.html'
             }, 4000)
+        }
+
+        $(".ojtb1").hover(function() {
+                addNote("Loại cốc thuỷ tinh thường được dùng trong các thí nghiệm để đựng chất lòng. Cốc có khả năng chịu nhiệt tốt. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb2").hover(function() {
+                addNote("Được dùng để rót nước vào một vật chứa có miệng hẹp. Phễu cũng được dùng đỡ lọc giấy. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb3").hover(function() {
+                addNote("Có các lỗ nhỏ cho nước chảy qua và giữ lại các hạt tạp chất nhỏ. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb4").hover(function() {
+                addNote("Một loại bình chứa bằng thuỷ tinh có cổ hẹp. Thiết kế của bình phù hợp để đun nóng chất lỏng và các loại chất khác, hoặc trộn đều nhiều chất khác nhau. Cổ bình hẹp nên chất lỏng khó tràn ra ngoài. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb5").hover(function() {
+                addNote("Làm bằng chất liệu nhựa, thuỷ tinh hoặc kim loại dùng trong phòng thí nghiệm để đong, đo chính xác các chất ở dạng bột hoặc hạt nhỏ. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb6").hover(function() {
+                addNote("Lọc bỏ các hạt tạp chất tương đối lớn. ")
+            },
+            function() {
+                addNoteOut()
+
+            })
+
+        $(".ojtb7").hover(
+            function() {
+                addNote("...")
+                console.log("in")
+            },
+            function() {
+                addNoteOut()
+            }
+        )
+
+        $(".ojtb8").hover(
+            function() {
+                addNote("...")
+                console.log("in")
+            },
+            function() {
+                addNoteOut()
+
+            }
+        )
+
+        function addNote(no) {
+            $(".note-eqi").text(no)
+
+        }
+
+        function addNoteOut() {
+            $(".note-eqi").text('')
+                // $(".note-eqi").text("Con đã làm quen với tủ vật liệu rồi đấy! Để làm thí nghiệm này, chúng mình cần: 1 cái cốc, 1 cái rây, 1 cái phễu, 1 cái phễu lọc bằng giấy, 1 cái thìa và than hoạt tính.  ")
+            $(".note-eqi").append("Con đã làm quen với tủ vật liệu rồi đấy! Để làm thí nghiệm này, chúng mình cần: <b style='color: #005aff'>1 cái cốc, 1 cái rây, 1 cái phễu, 1 cái phễu lọc bằng giấy, 1 cái thìa và than hoạt tính.</b> ")
         }
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

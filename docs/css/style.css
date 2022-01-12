@@ -715,6 +715,69 @@
         float: right;
     }
     
+    .ojtb1:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb2:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb3:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb4:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb5:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb6:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb7:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .ojtb8:hover {
+        background-color: #73a5ff52;
+        border-radius: 15px;
+        transform: scale(1.05);
+    }
+    
+    .note-eqi {
+        padding: 10px;
+        background-color: #f5dcdc;
+        border: 1px solid #ff000099;
+        border-radius: 15px;
+        color: rgb(1 6 21);
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+        bottom: 19%;
+        position: absolute;
+        left: 70%;
+        font-size: 18px;
+        max-width: 210px;
+        word-break: break-word;
+    }
+    
     .ojHd {
         width: 100%;
         bottom: 0;
@@ -764,6 +827,7 @@
     .ojtb4 {
         float: right;
         width: 12%;
+        transition: all .2s ease-in-out;
     }
     
     .ojtb5 {
@@ -784,6 +848,20 @@
     .ojtb8 {
         float: left;
         width: 16%;
+        transition: all .2s ease-in-out;
+    }
+    
+    .chon-sai-tb {
+        animation-name: change-color-tb;
+        animation-duration: 0.8s;
+        border-radius: 15px;
+        animation-iteration-count: 3;
+    }
+    
+    @keyframes change-color-tb {
+        50% {
+            background-color: #ff00004a;
+        }
     }
     
     .obtb-choose {

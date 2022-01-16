@@ -968,7 +968,7 @@
     
     .button-hoanthanh {
         position: absolute;
-        top: 28%;
+        top: 32%;
         right: 45%;
         border: 1px solid blue;
         padding: 8px 22px;
@@ -985,7 +985,7 @@
         display: none;
         position: absolute;
         right: 45%;
-        top: 22%;
+        top: 28%;
         border: 1px solid blue;
         padding: 8px 22px;
         font-size: 18px;
@@ -1009,6 +1009,10 @@
         cursor: grab !important;
     }
     
+    .an {
+        display: none;
+    }
+    
     .note {
         padding: 10px;
         background-color: #f5dcdc61;
@@ -1016,47 +1020,87 @@
         border-radius: 15px;
         color: rgb(0 0 0);
         box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
-        bottom: 80%;
+        top: 10%;
         position: absolute;
         right: 40%;
-        font-size: 15px;
-        max-width: 210px;
+        font-size: 18px;
+        max-width: 350px;
         word-break: break-word;
+        font-weight: 600;
     }
     
-    .note-show {}
-    
-    .pheu-binh {
+    .pheu-binh2 {
         bottom: 38%;
         left: 30%;
         z-index: 2;
     }
     
-    .loc-binh {
+    .pheu-binh1 {
+        bottom: 38%;
+        left: 6%;
+        z-index: 2;
+    }
+    
+    .loc-binh2 {
         bottom: 41%;
         left: 30%;
         z-index: 3;
     }
     
-    .ray-binh {
+    .loc-binh1 {
+        bottom: 41%;
+        left: 6%;
+        z-index: 3;
+    }
+    
+    .ray-binh1 {
         bottom: 41.5%;
         left: 7%;
         z-index: 1;
     }
     
-    .do-than-binh-2 {
+    .ray-binh2 {
+        bottom: 41.5%;
+        left: 31%;
+        z-index: 1;
+    }
+    
+    .hien-vun-giay1 {
+        bottom: 46%;
+        left: 10%;
+        width: 8%;
+        height: 38px;
+        z-index: 2;
+        display: block;
+    }
+    
+    .hien-vun-giay2 {
+        bottom: 46%;
+        left: 34%;
+        width: 8%;
+        height: 38px;
+        z-index: 2;
+        display: block;
+    }
+    
+    .do-than-binh1 {
+        animation-name: do-than-sang-binh-1;
+        animation-duration: 4s;
+    }
+    
+    .do-than-binh2 {
         animation-name: do-than-sang-binh-2;
-        animation-duration: 8s;
+        animation-duration: 4s;
     }
     
     .do-binh-1 {
         animation-name: do-nuoc-sang-binh-2;
-        animation-duration: 8s;
+        animation-duration: 4s;
     }
     
     .do-binh-2 {
         animation-name: do-nuoc-sang-binh-1;
-        animation-duration: 8s;
+        animation-duration: 4s;
     }
     
     @keyframes do-than-sang-binh-2 {
@@ -1083,6 +1127,37 @@
             transform: rotate( 0deg);
             bottom: 57%;
             left: 38%;
+        }
+        100% {
+            bottom: 30%;
+            left: 75%;
+        }
+    }
+    
+    @keyframes do-than-sang-binh-1 {
+        0% {
+            bottom: 30%;
+            left: 75%;
+        }
+        25% {
+            transform: rotate( 0deg);
+            bottom: 57%;
+            left: 14%;
+        }
+        30% {
+            transform: rotate( -60deg);
+            bottom: 57%;
+            left: 14%;
+        }
+        80% {
+            transform: rotate( -60deg);
+            bottom: 57%;
+            left: 14%;
+        }
+        90% {
+            transform: rotate( 0deg);
+            bottom: 57%;
+            left: 14%;
         }
         100% {
             bottom: 30%;

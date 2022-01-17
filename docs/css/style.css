@@ -1071,7 +1071,41 @@
         width: 8%;
         height: 38px;
         z-index: 2;
-        display: block;
+        display: block !important;
+    }
+    
+    .hien-giay-uot1 {
+        left: 8%;
+        bottom: 36%;
+        width: 11%;
+        z-index: 2;
+        display: block !important;
+    }
+    
+    .hien-giay-uot2 {
+        left: 32%;
+        bottom: 36%;
+        width: 11%;
+        z-index: 2;
+        display: block !important;
+    }
+    
+    .hien-giay-cat1 {
+        left: 7%;
+        bottom: 53%;
+        width: 13%;
+        z-index: 5;
+        display: block !important;
+        height: 30px;
+    }
+    
+    .hien-giay-cat2 {
+        left: 31%;
+        bottom: 53%;
+        width: 13%;
+        z-index: 5;
+        display: block !important;
+        height: 30px;
     }
     
     .hien-vun-giay2 {

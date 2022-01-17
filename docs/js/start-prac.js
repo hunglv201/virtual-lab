@@ -3,7 +3,7 @@ var step = 1;
 var state = 1; //chua giay, cat, ban   tb9-8  tb1
 // state = 2; //chua cat, ban tb9-9  tb1
 // state = 3; //chua ban tb9-10
-// state = 4; //chua ban , than  tb9-5
+state = 4; //chua ban , than  tb9-5
 // state = 0 //sạch
 
 if (state == 1) {
@@ -45,8 +45,8 @@ function drag(ev) {
                     $("#giay-loc").css("opacity", 0)
                 }, 4000)
             }
-            if (state == 1) {
-                if (checkdungcudangdung() == "ray") {
+            if (checkdungcudangdung() == "ray") {
+                if (state == 1) {
                     setTimeout(function() {
                         state = 2
                         $("#vun-giay").addClass("hien-vun-giay2")
@@ -59,8 +59,17 @@ function drag(ev) {
 
                 }
             }
-            if (state == 2) {
-                if (checkdungcudangdung().includes("giay") && checkdungcudangdung().includes("pheu")) {
+            if (checkdungcudangdung().includes("giay") && checkdungcudangdung().includes("pheu")) {
+                if (state == 1) {
+                    setTimeout(function() {
+                        $("#nuoc-tran").addClass("nuoc-tran2")
+                        setTimeout(function() {
+                            $("#nuoc-tran").removeClass("nuoc-tran2")
+                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?")
+                        }, 3000)
+
+                    }, 3000)
+                } else if (state == 2) {
                     setTimeout(function() {
                         state = 3
                         $("#cat").addClass("hien-vun-cat2")
@@ -70,6 +79,10 @@ function drag(ev) {
                         }, 3000)
 
                     }, 2000)
+                } else if (state == 4) {
+                    setTimeout(function() {
+                        state = 0;
+                    }, 3000)
                 }
             }
             binh1donuoc(true)
@@ -100,12 +113,21 @@ function drag(ev) {
                             themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé")
                         }, 3000)
 
-                    }, 2000)
+                    }, 3000)
 
                 }
             }
-            if (state == 2) {
-                if (checkdungcudangdung().includes("giay") && checkdungcudangdung().includes("pheu")) {
+            if (checkdungcudangdung().includes("giay") && checkdungcudangdung().includes("pheu")) {
+                if (state == 1) {
+                    setTimeout(function() {
+                        $("#nuoc-tran").addClass("nuoc-tran1")
+                        setTimeout(function() {
+                            $("#nuoc-tran").removeClass("nuoc-tran1")
+                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?")
+                        }, 3000)
+
+                    }, 2000)
+                } else if (state == 2) {
                     setTimeout(function() {
                         state = 3
                         $("#cat").addClass("hien-vun-cat1")
@@ -115,6 +137,10 @@ function drag(ev) {
                         }, 3000)
 
                     }, 2000)
+                } else if (state == 4) {
+                    setTimeout(function() {
+                        state = 0;
+                    }, 3000)
                 }
             }
             binh2donuoc(true)
@@ -140,10 +166,16 @@ function drag(ev) {
         }
     } else if (idTB == "ray") {
         if (state == 1) {
-            if (checkdungcudangdung() !== "pheu" && checkdungcudangdung() !== "giay")
-                datray(true)
-            else {
+            if (checkdungcudangdung() === "pheu" || checkdungcudangdung() === "giay")
                 datray(false)
+            else {
+                datray(true)
+            }
+        } else if (state == 2) {
+            if (checkdungcudangdung() === "pheu" || checkdungcudangdung() === "giay")
+                datray(false)
+            else {
+                datray(true)
             }
         } else {
             datray(true)
@@ -153,12 +185,8 @@ function drag(ev) {
     } else if (idTB == "dua") {
         datdua()
     } else if (idTB == "than-hoat-tinh") {
-        if (state != 3) {
-            if (checkbinhrong() != "b1") {
-                dothanvaobinh(false)
-            } else {
-                dothanvaobinh(false)
-            }
+        if (state != 3 && state != 4) {
+            dothanvaobinh(false)
         } else {
             dothanvaobinh(true)
         }
@@ -173,12 +201,32 @@ setTimeout(function() {
 
 function dothanvaobinh(active) {
     if (active) {
-        if (checkbinhrong() == "b1") {
+        if (checkbinhrong() != "b1") {
+            setTimeout(function() {
+                $("#do-than").addClass("hien-than2")
+                setTimeout(function() {
+                    $("#do-than").removeClass("hien-than2")
+                    $(".binh2").attr("src", "./images/tb1.png")
+                    $(".binh1").attr("src", "./images/tb9-5.png")
+                    state = 4
+                }, 3000)
+
+            }, 2000)
             $(".than-hoat-tinh").toggleClass("do-than-binh1")
             setTimeout(function() {
                 $(".than-hoat-tinh").toggleClass("do-than-binh1")
             }, 4000)
         } else {
+            setTimeout(function() {
+                $("#do-than").addClass("hien-than1")
+                setTimeout(function() {
+                    $("#do-than").removeClass("hien-than1")
+                    $(".binh1").attr("src", "./images/tb1.png")
+                    $(".binh2").attr("src", "./images/tb9-5.png")
+                    state = 4
+                }, 3000)
+
+            }, 2000)
             $(".than-hoat-tinh").toggleClass("do-than-binh2")
             setTimeout(function() {
                 $(".than-hoat-tinh").toggleClass("do-than-binh2")
@@ -215,6 +263,12 @@ function binh1donuoc(active) {
             } else if (state == 0) {
                 $(".binh1").attr("src", "./images/tb1.png")
                 $(".binh2").attr("src", "./images/tb9-10.png")
+                setTimeout(function() {
+                    themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
+                    $(".dungcu").css("opacity", "0")
+                    $(".hp").css("display", "block")
+                    $(".button-hoanthanh").css("display", "block")
+                }, 5000)
             }
             resetdungcu()
         }, 4000)
@@ -249,20 +303,15 @@ function binh2donuoc(active) {
             } else if (state == 0) {
                 $(".binh2").attr("src", "./images/tb1.png")
                 $(".binh1").attr("src", "./images/tb9-10.png")
+                setTimeout(function() {
+                    themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
+                    $(".dungcu").css("opacity", "0")
+                    $(".hp").css("display", "block")
+                    $(".button-hoanthanh").css("display", "block")
+                }, 5000)
             }
             resetdungcu()
         }, 4000)
-
-
-        if (state == 0) {
-            setTimeout(function() {
-                themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
-                $(".dungcu").css("opacity", "0")
-                $(".hp").css("display", "block")
-                $(".button-don-dep").css("display", "block")
-            }, 5000)
-
-        }
     } else {
         $(".binh2").toggleClass("chon-sai")
         setTimeout(function() {

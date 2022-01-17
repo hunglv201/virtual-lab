@@ -3,7 +3,7 @@ var step = 1;
 var state = 1; //chua giay, cat, ban   tb9-8  tb1
 // state = 2; //chua cat, ban tb9-9  tb1
 // state = 3; //chua ban tb9-10
-state = 4; //chua ban , than  tb9-5
+// state = 4; //chua ban , than  tb9-5
 // state = 0 //sạch
 
 if (state == 1) {

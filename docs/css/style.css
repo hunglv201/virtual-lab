@@ -261,10 +261,16 @@
     }
     
     .oj14 {
-        width: 17%;
-        left: 55%;
-        bottom: 7%;
+        width: 15%;
+        left: 60%;
+        bottom: 1%;
         z-index: 2;
+    }
+    
+    .m2text {
+        width: 35%;
+        left: 60%;
+        bottom: 22%;
     }
     
     .oj13 {
@@ -442,7 +448,7 @@
     .oj14-slide {
         width: 17%;
         left: 55%;
-        bottom: 7%;
+        bottom: 2%;
         z-index: 2;
     }
     
@@ -450,6 +456,13 @@
         width: 36%;
         left: 52%;
         bottom: 66%;
+    }
+    
+    .m3text {
+        width: 36%;
+        left: 55%;
+        bottom: 24%;
+        z-index: 10;
     }
     
     .oj12-slide {
@@ -486,6 +499,21 @@
         width: 17%;
         left: 68%;
         bottom: 4%;
+        z-index: 4;
+    }
+    
+    .m4text {
+        width: 37%;
+        left: 62%;
+        bottom: 30%;
+        z-index: 4;
+        display: none;
+    }
+    
+    .m5text {
+        width: 38%;
+        left: 62%;
+        bottom: 32%;
         z-index: 4;
     }
     

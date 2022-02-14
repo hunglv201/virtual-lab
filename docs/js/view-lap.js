@@ -28,7 +28,7 @@ $(".hoanthanh").click(function() {
     if (datl.length == 0) {
         Toastify({
             text: "Hoàn thành câu hỏi",
-            duration: 1000,
+            duration: 2000,
             gravity: "top", // `top` or `bottom`
             position: "center", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -97,7 +97,8 @@ function chooseDA(da) {
     }
     setTimeout(function() {
         $(".show-rs").css("opacity", 1);
-    }, 500)
+        $(".m4text").css("display", "block")
+    }, 600)
 }
 
 var video = document.getElementsByTagName('video')[0];

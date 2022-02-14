@@ -133,9 +133,10 @@
             var count = $(".display-none").length;
             console.log(count)
             if (count == 0) {
+                addNote("Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi")
                 Toastify({
-                    text: "Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi",
-                    duration: 3000,
+                    text: "Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi.",
+                    duration: 5000,
                     gravity: "top", // `top` or `bottom`
                     position: "center", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -162,7 +163,7 @@
         }
 
         $(".ojtb1").hover(function() {
-                addNote("Loại cốc thuỷ tinh thường được dùng trong các thí nghiệm để đựng chất lòng. Cốc có khả năng chịu nhiệt tốt. ")
+                addNote("Cốc: Loại cốc thuỷ tinh thường được dùng trong các thí nghiệm để đựng chất lòng. Cốc có khả năng chịu nhiệt tốt. ")
             },
             function() {
                 addNoteOut()
@@ -170,7 +171,7 @@
             })
 
         $(".ojtb2").hover(function() {
-                addNote("Được dùng để rót nước vào một vật chứa có miệng hẹp. Phễu cũng được dùng đỡ lọc giấy. ")
+                addNote("Phễu: Được dùng để rót nước vào một vật chứa có miệng hẹp. Phễu cũng được dùng đỡ lọc giấy. ")
             },
             function() {
                 addNoteOut()
@@ -178,7 +179,7 @@
             })
 
         $(".ojtb3").hover(function() {
-                addNote("Có các lỗ nhỏ cho nước chảy qua và giữ lại các hạt tạp chất nhỏ. ")
+                addNote("Phễu lọc bằng giấy: Có các lỗ nhỏ cho nước chảy qua và giữ lại các hạt tạp chất nhỏ. ")
             },
             function() {
                 addNoteOut()
@@ -186,7 +187,7 @@
             })
 
         $(".ojtb4").hover(function() {
-                addNote("Một loại bình chứa bằng thuỷ tinh có cổ hẹp. Thiết kế của bình phù hợp để đun nóng chất lỏng và các loại chất khác, hoặc trộn đều nhiều chất khác nhau. Cổ bình hẹp nên chất lỏng khó tràn ra ngoài. ")
+                addNote("Bình tam giác: Một loại bình chứa bằng thuỷ tinh có cổ hẹp. Thiết kế của bình phù hợp để đun nóng chất lỏng và các loại chất khác, hoặc trộn đều nhiều chất khác nhau. Cổ bình hẹp nên chất lỏng khó tràn ra ngoài. ")
             },
             function() {
                 addNoteOut()
@@ -194,7 +195,7 @@
             })
 
         $(".ojtb5").hover(function() {
-                addNote("Làm bằng chất liệu nhựa, thuỷ tinh hoặc kim loại dùng trong phòng thí nghiệm để đong, đo chính xác các chất ở dạng bột hoặc hạt nhỏ. ")
+                addNote("Thìa/Muỗng: Làm bằng chất liệu nhựa, thuỷ tinh hoặc kim loại dùng trong phòng thí nghiệm để đong, đo chính xác các chất ở dạng bột hoặc hạt nhỏ. ")
             },
             function() {
                 addNoteOut()
@@ -202,7 +203,7 @@
             })
 
         $(".ojtb6").hover(function() {
-                addNote("Lọc bỏ các hạt tạp chất tương đối lớn. ")
+                addNote("Rây: Lọc bỏ các hạt tạp chất tương đối lớn. ")
             },
             function() {
                 addNoteOut()
@@ -211,7 +212,7 @@
 
         $(".ojtb7").hover(
             function() {
-                addNote("...")
+                addNote("Than hoạt tính: là một loại bột màu đen, không mùi, không vị, dùng để loại bỏ các chất hữu cơ, khử mùi, hút các chất hóa học, tạp chất hòa tan trong nước.")
                 console.log("in")
             },
             function() {
@@ -237,7 +238,6 @@
 
         function addNoteOut() {
             $(".note-eqi").text('')
-                // $(".note-eqi").text("Con đã làm quen với tủ vật liệu rồi đấy! Để làm thí nghiệm này, chúng mình cần: 1 cái cốc, 1 cái rây, 1 cái phễu, 1 cái phễu lọc bằng giấy, 1 cái thìa và than hoạt tính.  ")
             $(".note-eqi").append("Con đã làm quen với tủ vật liệu rồi đấy! Để làm thí nghiệm này, chúng mình cần: <b style='color: #005aff'>1 cái cốc, 1 cái rây, 1 cái phễu, 1 cái phễu lọc bằng giấy, 1 cái thìa và than hoạt tính.</b> ")
         }
     </script>

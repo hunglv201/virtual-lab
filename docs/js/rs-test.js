@@ -9,6 +9,10 @@ setTimeout(function() {
     $(".item-hire").addClass("hire-zoom")
 }, 1500)
 
+setTimeout(function() {
+    $(".m5text").css("display", "none")
+}, 8000)
+
 $(".list-cauhoi").addClass("display-block")
 $(".video-play").addClass("display-none")
 
@@ -25,6 +29,7 @@ function xemvideo() {
     console.log("video")
     $(".list-cauhoi").removeClass("display-block")
     $(".video-play").removeClass("display-none")
+    $(".kq").removeClass("display-block")
     $(".video-play").get(0).play()
 }
 
@@ -38,7 +43,7 @@ function goLap() {
     $("#main-layout").addClass("layout-opacity-7")
     $("#loadingGoto").css("display", "flex")
     setTimeout(function() {
-        window.location.href = 'list-lap.html'
+        window.location.href = 'list-lab.html'
     }, 600)
 }
 
@@ -99,11 +104,11 @@ function chooseDA(causos, da) {
         }, 600)
 
         setTimeout(function() {
-            xemvideo()
+            showKq()
         }, 4000)
     } else {
         setTimeout(function() {
-            xemvideo()
+            showKq()
         }, 2000)
     }
 }
@@ -130,12 +135,13 @@ function hoanthanh() {
 var video = document.getElementsByTagName('video')[0];
 video.onended = function(e) {
     setTimeout(function() {
-        showKq()
-    }, 3000)
+        goLap()
+    }, 5000)
 };
 
 
 function showKq() {
+    $(".list-cauhoi").removeClass("display-block")
     $(".kq").addClass("display-block")
     $(".video-play").addClass("display-none")
     $("#sodadung").append(daDung)

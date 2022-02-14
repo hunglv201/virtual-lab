@@ -207,7 +207,7 @@ function dothanvaobinh(active) {
                 setTimeout(function() {
                     $("#do-than").removeClass("hien-than2")
                     $(".binh2").attr("src", "./images/tb1.png")
-                    $(".binh1").attr("src", "./images/tb9-5.png")
+                    $(".binh1").attr("src", "./images/tb9-12.png")
                     state = 4
                 }, 3000)
 
@@ -222,7 +222,7 @@ function dothanvaobinh(active) {
                 setTimeout(function() {
                     $("#do-than").removeClass("hien-than1")
                     $(".binh1").attr("src", "./images/tb1.png")
-                    $(".binh2").attr("src", "./images/tb9-5.png")
+                    $(".binh2").attr("src", "./images/tb9-12.png")
                     state = 4
                 }, 3000)
 
@@ -256,10 +256,10 @@ function binh1donuoc(active) {
                 $(".binh2").attr("src", "./images/tb9-9.png")
             } else if (state == 3) {
                 $(".binh1").attr("src", "./images/tb1.png")
-                $(".binh2").attr("src", "./images/tb9-10.png")
+                $(".binh2").attr("src", "./images/tb9-5.png")
             } else if (state == 4) {
                 $(".binh1").attr("src", "./images/tb1.png")
-                $(".binh2").attr("src", "./images/tb9-5.png")
+                $(".binh2").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh1").attr("src", "./images/tb1.png")
                 $(".binh2").attr("src", "./images/tb9-10.png")
@@ -296,10 +296,10 @@ function binh2donuoc(active) {
                 $(".binh1").attr("src", "./images/tb9-9.png")
             } else if (state == 3) {
                 $(".binh2").attr("src", "./images/tb1.png")
-                $(".binh1").attr("src", "./images/tb9-10.png")
+                $(".binh1").attr("src", "./images/tb9-5.png")
             } else if (state == 4) {
                 $(".binh2").attr("src", "./images/tb1.png")
-                $(".binh1").attr("src", "./images/tb9-5.png")
+                $(".binh1").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh2").attr("src", "./images/tb1.png")
                 $(".binh1").attr("src", "./images/tb9-10.png")

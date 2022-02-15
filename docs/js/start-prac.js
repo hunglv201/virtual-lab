@@ -209,6 +209,7 @@ function dothanvaobinh(active) {
                     $(".binh2").attr("src", "./images/tb1.png")
                     $(".binh1").attr("src", "./images/tb9-12.png")
                     state = 4
+                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ")
                 }, 3000)
 
             }, 2000)
@@ -224,6 +225,7 @@ function dothanvaobinh(active) {
                     $(".binh1").attr("src", "./images/tb1.png")
                     $(".binh2").attr("src", "./images/tb9-12.png")
                     state = 4
+                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ")
                 }, 3000)
 
             }, 2000)
@@ -304,7 +306,7 @@ function binh2donuoc(active) {
                 $(".binh2").attr("src", "./images/tb1.png")
                 $(".binh1").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
-                    themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
+                    themNote("Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình.")
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
                     $(".button-hoanthanh").css("display", "block")
@@ -449,10 +451,9 @@ function dondep() {
 
 function huongdan() {
     if (state == 0) {
-        $(".note").text("Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. ")
         setTimeout(function() {
             $(".note").text("Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
-        }, 15000)
+        }, 10000)
     } else if (state == 1) {
         $(".note").text("Trong nước có vụn nilon và cát. Theo con, chúng ta nên lọc tạp chất nào trước? Các con hãy nghĩ cách lọc tạp chất này ra khỏi nước. ")
         setTimeout(function() {
@@ -463,7 +464,7 @@ function huongdan() {
     } else if (state == 3) {
         $(".note").text("Để lọc sạch nước, chúng ta cần than hoạt tính, khi hòa lần vào nước, than sẽ lọc ra các hạt đát cát cực nhỏ")
     } else if (state == 4) {
-        $(".note").text("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé!")
+        $(".note").text("Cô gợi ý, các hạt than tinh thể có kích thước lớn hơn lỗ giấy lọc. Hãy lựa chọn dụng cụ thông minh để hoàn thành thí nghiệm này nhé.")
 
     }
 }

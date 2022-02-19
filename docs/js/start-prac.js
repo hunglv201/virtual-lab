@@ -309,7 +309,7 @@ function binh2donuoc(active) {
                     themNote("Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình.")
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
-                    $(".button-hoanthanh").css("display", "block")
+                    $(".button-don-dep").css("display", "block")
                 }, 5000)
             }
             resetdungcu()

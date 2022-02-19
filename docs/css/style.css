@@ -970,6 +970,11 @@
         left: 60%;
     }
     
+    .dua1 {
+        bottom: 28%;
+        left: 10%;
+    }
+    
     .than-hoat-tinh {
         width: 20%;
         bottom: 30%;
@@ -980,18 +985,33 @@
         width: 25%;
         bottom: -15%;
         left: 5%;
+        transition: all .3s;
+    }
+    
+    .tb11-prac:hover {
+        transform: scale(1.1);
+    }
+    
+    .tb12-prac:hover {
+        transform: scale(1.1);
+    }
+    
+    .tb13-prac:hover {
+        transform: scale(1.1);
     }
     
     .tb12-prac {
         width: 25%;
         bottom: -10%;
         left: 37%;
+        transition: all .3s;
     }
     
     .tb13-prac {
         width: 30%;
         bottom: -4%;
         left: 70%;
+        transition: all .3s;
     }
     
     .button-hoanthanh {

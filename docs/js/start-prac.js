@@ -269,7 +269,7 @@ function binh1donuoc(active) {
                     themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
-                    $(".button-hoanthanh").css("display", "block")
+                    $(".button-don-dep").css("display", "block")
                 }, 5000)
             }
             resetdungcu()
@@ -441,12 +441,11 @@ function goListLap() {
 }
 
 function dondep() {
-    $(".thungrac").toggleClass("show-thungrac")
-    $(".dungcu").css("opacity", "1")
-    $(".hp").css("display", "none")
-
-    $(".button-don-dep").css("display", "none")
-    $(".button-hoanthanh").css("display", "block")
+    $("#main-layout").addClass("layout-opacity-7")
+    $("#loadingGoto").css("display", "flex")
+    setTimeout(function() {
+        window.location.href = 'clean.html'
+    }, 600)
 }
 
 function huongdan() {

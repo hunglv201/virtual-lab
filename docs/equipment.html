@@ -20,6 +20,8 @@
         <div class="two"></div>
         <div class="three"></div>
     </div>
+    <audio id="audio1" src="audio/màn _equipment_ Con đã làm quen với tủ vật liệu rồi đấy....m4a" controls autoplay style="display: none;"></audio>
+    <audio id="audio2" src="audio/màn _equipment_ Tuyệt lắm! Giwof chúng ta đã có mọi thứ cần thiết. Bắt đầu thôi!.m4a" controls style="display: none;"></audio>
     <div class="area">
         <div id="main-layout" class="layout-equipment">
             <div class="layout1">
@@ -132,11 +134,13 @@
 
             var count = $(".display-none").length;
             console.log(count)
+            count = 0;
             if (count == 0) {
+                $("#audio2")[0].play();
                 addNote("Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi")
                 Toastify({
                     text: "Tuyệt lắm! Bây giờ, chúng ta đã có mọi thứ cần thiết! Bắt đầu thôi.",
-                    duration: 5000,
+                    duration: 10000,
                     gravity: "top", // `top` or `bottom`
                     position: "center", // `left`, `center` or `right`
                     stopOnFocus: true, // Prevents dismissing of toast on hover
@@ -156,10 +160,10 @@
             setTimeout(function() {
                 $("#main-layout").addClass("layout-opacity-7")
                 $("#loadingGoto").css("display", "flex")
-            }, 2000)
+            }, 6000)
             setTimeout(function() {
                 window.location.href = 'prepare-start.html'
-            }, 4000)
+            }, 8000)
         }
 
         $(".ojtb1").hover(function() {

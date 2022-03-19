@@ -69,6 +69,7 @@ function tabCauhoi() {
     $("#cauhoi").toggleClass("tab-choose")
     $("#xemvideo").toggleClass("tab-choose")
     console.log("cauhoi")
+    $("#audio1")[0].play();
     $(".list-cauhoi").addClass("display-block")
     $(".video-play").addClass("display-none")
 }
@@ -98,6 +99,7 @@ function chooseDA(da) {
     setTimeout(function() {
         $(".show-rs").css("opacity", 1);
         $(".m4text").css("display", "block")
+        $("#audio2")[0].play();
     }, 600)
 }
 

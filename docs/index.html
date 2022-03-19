@@ -24,7 +24,7 @@
             <img class="in-game oj4" src="./images/4.png" />
             <div class="in-game start-button">
                 <button class=" button-custom" role="button" onclick="goPrepare()">  BẮT ĐẦU</button>
-                <audio id="myAudioElement" src="audio/index.m4a" controls autoplay style="display: none;"></audio>
+                <audio class="audio" id="myAudioElement" src="audio/index.m4a" controls autoplay style="display: none;"></audio>
             </div>
             <img class="in-game icon-note" src="./images/5.svg" />
         </div>
@@ -65,7 +65,7 @@
 
         function phattieng(){
             $(".mute-icon").css("display", "none");
-            $("#myAudioElement")[0].play();
+            $(".audio")[0].play();
         }
     </script>
 

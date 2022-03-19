@@ -184,6 +184,11 @@
     .in-game {
         position: absolute;
     }
+
+    .mute-icon{
+        width: 6%;
+        right: 0;
+    }
     
     .person {
         width: 20%;

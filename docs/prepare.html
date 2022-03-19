@@ -15,12 +15,13 @@
 <!-- body -->
 
 <body>
-    <div id="loading"></div>
+    <!-- <div id="loading"></div> -->
     <div id="loadingGoto">
         <div class="one"></div>
         <div class="two"></div>
         <div class="three"></div>
     </div>
+    <audio src="audio/index.m4a" controls autoplay style="display: none;"></audio>
     <div class="area">
         <div id="main-layout" class="layout-prepare">
             <div class="layout1">
@@ -99,7 +100,7 @@
         })
 
         setTimeout(function() {
-            document.getElementById("loading").style.display = "none";
+            // document.getElementById("loading").style.display = "none";
             document.getElementById("main-layout").style.display = "block";
         }, 0);
 

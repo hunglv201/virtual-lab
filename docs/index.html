@@ -19,10 +19,12 @@
 
     <div class="area">
         <div id="main-layout" class="layout-index">
+            <img class="in-game mute-icon" src="./images/mute-icon.ico" onclick="phattieng()"/>
             <img class="in-game person" src="./images/3.svg" />
             <img class="in-game oj4" src="./images/4.png" />
             <div class="in-game start-button">
                 <button class=" button-custom" role="button" onclick="goPrepare()">  BẮT ĐẦU</button>
+                <audio id="myAudioElement" src="audio/index.m4a" controls autoplay style="display: none;"></audio>
             </div>
             <img class="in-game icon-note" src="./images/5.svg" />
         </div>
@@ -59,6 +61,11 @@
             setTimeout(function() {
                 window.location.href = 'prepare.html'
             }, 600)
+        }
+
+        function phattieng(){
+            $(".mute-icon").css("display", "none");
+            $("#myAudioElement")[0].play();
         }
     </script>
 

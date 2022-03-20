@@ -50,6 +50,8 @@ function goLap() {
 function chooseDA(causos, da) {
 
     if (causos == 1) {
+        if($(".nhanch1-oj32").hasClass("chon-da"))
+            return
         if (da == 1)
             $(".nhanch1-oj32").toggleClass("chon-da")
         if (da == 2) {
@@ -68,6 +70,8 @@ function chooseDA(causos, da) {
             $("#cau2").show()
         }, 3000)
     } else if (causos == 2) {
+        if($(".nhanch2-oj32").hasClass("chon-da"))
+            return
         if (da == 1)
             $(".nhanch2-oj32").toggleClass("chon-da")
         if (da == 2)
@@ -88,6 +92,8 @@ function chooseDA(causos, da) {
             $("#cau3").show()
         }, 3000)
     } else if (causos == 3) {
+        if($(".nhanch3-oj32").hasClass("chon-da"))
+            return
         if (da == 1)
             $(".nhanch3-oj32").toggleClass("chon-da")
         if (da == 2) {

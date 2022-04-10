@@ -26,20 +26,33 @@ if (state == 1) {
 huongdan();
 
 function mute() {
-    $(".audio")[0].mute();
-    $(".audio")[1].mute();
-    $(".audio")[2].mute();
-    $(".audio")[3].mute();
-    $(".audio")[4].mute();
-    $(".audio")[5].mute();
-    $(".audio")[6].mute();
-    $(".audio")[7].mute();
-    $(".audio")[8].mute();
-    $(".audio")[9].mute();
-    $(".audio")[10].mute();
-    $(".audio")[11].mute();
-    $(".audio")[12].mute();
-    $(".audio")[13].mute();
+    $(".audio")[0].muted = true;
+    $(".audio")[1].muted = true;
+    $(".audio")[2].muted = true;
+    $(".audio")[3].muted = true;
+    $(".audio")[4].muted = true;
+    $(".audio")[5].muted = true;
+    $(".audio")[6].muted = true;
+    $(".audio")[7].muted = true;
+    $(".audio")[8].muted = true;
+    $(".audio")[9].muted = true;
+    $(".audio")[10].muted = true;
+    $(".audio")[11].muted = true;
+    $(".audio")[12].muted = true;
+    $(".audio")[13].muted = true;
+    $(".audio")[14].muted = true;
+    $(".audio")[15].muted = true;
+    $(".audio")[16].muted = true;
+    $(".audio")[17].muted = true;
+    $(".audio")[18].muted = true;
+    $(".audio")[19].muted = true;
+    $(".audio")[20].muted = true;
+}
+
+function phattieng (stt) {
+    mute()
+    $(".audio")[stt].muted = false;
+    $(".audio")[stt].play();
 }
 
 var stepStatus = "dang" // dodep, xong
@@ -58,8 +71,8 @@ function drag(ev) {
                         $("#giay-uot").removeClass("hien-giay-uot2")
                         $("#giay-loc").css("opacity", 1)
                     }, 8000)
-                    themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.")
-                    $(".audio")[1].play();
+                    themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.", 4000)
+                    phattieng(1) 
                     $("#giay-loc").css("opacity", 0)
                 }, 4000)
             }
@@ -70,8 +83,8 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-giay2")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-giay2")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé")
-                            $(".audio")[0].play();
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 8000)
+                            phattieng(0) 
                         }, 3000)
 
                     }, 2000)
@@ -84,8 +97,8 @@ function drag(ev) {
                         $("#nuoc-tran").addClass("nuoc-tran2")
                         setTimeout(function() {
                             $("#nuoc-tran").removeClass("nuoc-tran2")
-                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?")
-                            $(".audio")[5].play();
+                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?", 8000)
+                            phattieng(5) 
                         }, 3000)
 
                     }, 3000)
@@ -95,8 +108,8 @@ function drag(ev) {
                         $("#cat").addClass("hien-vun-cat2")
                         setTimeout(function() {
                             $("#cat").removeClass("hien-vun-cat2")
-                            themNote("Con làm tốt lắm! Hạt cát có kích thước lớn hơn lỗ giấy lọc, vì vậy cát sẽ đọng lại trên giấy lọc. Nước có kích thước hạt nhỏ hơn nên chảy xuyên qua giấy.")
-                            $(".audio")[3].play();
+                            themNote("Con làm tốt lắm! Hạt cát có kích thước lớn hơn lỗ giấy lọc, vì vậy cát sẽ đọng lại trên giấy lọc. Nước có kích thước hạt nhỏ hơn nên chảy xuyên qua giấy.", 11000)
+                            phattieng(3) 
                         }, 3000)
 
                     }, 2000)
@@ -120,8 +133,8 @@ function drag(ev) {
                         $("#giay-uot").removeClass("hien-giay-uot1")
                         $("#giay-loc").css("opacity", 1)
                     }, 8000)
-                    themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.")
-                    $(".audio")[1].play();
+                    themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.", 4000)
+                    phattieng(1) 
                     $("#giay-loc").css("opacity", 0)
                 }, 4000)
             }
@@ -132,8 +145,8 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-cat1")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-cat1")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé")
-                            $(".audio")[0].play();
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 4000)
+                            phattieng(0) 
                         }, 3000)
 
                     }, 3000)
@@ -146,8 +159,8 @@ function drag(ev) {
                         $("#nuoc-tran").addClass("nuoc-tran1")
                         setTimeout(function() {
                             $("#nuoc-tran").removeClass("nuoc-tran1")
-                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?")
-                            $(".audio")[7].play();
+                            themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?", 4000)
+                            phattieng(7) 
                         }, 3000)
 
                     }, 2000)
@@ -157,8 +170,8 @@ function drag(ev) {
                         $("#cat").addClass("hien-vun-cat1")
                         setTimeout(function() {
                             $("#cat").removeClass("hien-vun-cat1")
-                            themNote("Con làm tốt lắm! Hạt cát có kích thước lớn hơn lỗ giấy lọc, vì vậy cát sẽ đọng lại trên giấy lọc. Nước có kích thước hạt nhỏ hơn nên chảy xuyên qua giấy.")
-                            $(".audio")[3].play();
+                            themNote("Con làm tốt lắm! Hạt cát có kích thước lớn hơn lỗ giấy lọc, vì vậy cát sẽ đọng lại trên giấy lọc. Nước có kích thước hạt nhỏ hơn nên chảy xuyên qua giấy.", 11000)
+                            phattieng(3) 
                         }, 3000)
 
                     }, 2000)
@@ -176,8 +189,8 @@ function drag(ev) {
         if (state == 1) {
             if (checkdungcudangdung() !== "ray" && checkdungcudangdung() !== "giay") {
                 datpheu(true)
-                themNote("Chỉ có phễu thôi không đủ. Con cần thêm một vật dụng nữa để lọc nước.")
-                $(".audio")[19].play();
+                themNote("Chỉ có phễu thôi không đủ. Con cần thêm một vật dụng nữa để lọc nước.", 6000)
+                phattieng(19) 
             } else {
                 datpheu(false)
             }
@@ -186,8 +199,8 @@ function drag(ev) {
         }
     } else if (idTB == "giay-loc") {
         if (checkdungcudangdung() == "ray") {
-            themNote("Không được rồi! Con thử nghĩ cách khác xem.")
-            $(".audio")[8].play();
+            themNote("Không được rồi! Con thử nghĩ cách khác xem.", 4000)
+            phattieng(8) 
         } else {
             datloc()
         }
@@ -236,8 +249,8 @@ function dothanvaobinh(active) {
                     $(".binh2").attr("src", "./images/tb1.png")
                     $(".binh1").attr("src", "./images/tb9-12.png")
                     state = 4
-                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ")
-                    $(".audio")[10].play();
+                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
+                    phattieng(10) 
                 }, 3000)
 
             }, 2000)
@@ -253,8 +266,8 @@ function dothanvaobinh(active) {
                     $(".binh1").attr("src", "./images/tb1.png")
                     $(".binh2").attr("src", "./images/tb9-12.png")
                     state = 4
-                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ")
-                    $(".audio")[10].play();
+                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
+                    phattieng(10) 
                 }, 3000)
 
             }, 2000)
@@ -266,8 +279,8 @@ function dothanvaobinh(active) {
 
     } else {
         $(".than-hoat-tinh").toggleClass("chon-sai")
-        themNote("Ý tưởng hay đấy! Nhưng con chỉ nên sử dụng than hoạt tính để khử màu cho nước khi không còn các tạp chất bẩn như đá và cát ở trong nước nữa. Con hãy nghĩ cách loại bỏ các chất bẩn ra khỏi nước nhé.")
-        $(".audio")[18].play();
+        themNote("Ý tưởng hay đấy! Nhưng con chỉ nên sử dụng than hoạt tính để khử màu cho nước khi không còn các tạp chất bẩn như đá và cát ở trong nước nữa. Con hãy nghĩ cách loại bỏ các chất bẩn ra khỏi nước nhé.", 14000)
+        phattieng(18)
         setTimeout(function() {
             $(".than-hoat-tinh").toggleClass("chon-sai")
         }, 1200)
@@ -296,8 +309,8 @@ function binh1donuoc(active) {
                 $(".binh1").attr("src", "./images/tb1.png")
                 $(".binh2").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
-                    themNote("- Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình. - Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
-                    $(".audio")[11].play();
+                    themNote("- Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
+                    phattieng(11)
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
                     $(".button-don-dep").css("display", "block")
@@ -337,8 +350,8 @@ function binh2donuoc(active) {
                 $(".binh2").attr("src", "./images/tb1.png")
                 $(".binh1").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
-                    themNote("Thành công rồi! Nước đã hoàn toàn sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước lấy lại màu xanh cho mình.")
-                    $(".audio")[11].play();
+                    themNote("Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
+                    phattieng(11)
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
                     $(".button-don-dep").css("display", "block")
@@ -404,8 +417,8 @@ function datray(active) {
         }
     } else {
         $(".ray").toggleClass("chon-sai")
-        themNote("Không được rồi! Con thử nghĩ cách khác xem.")
-        $(".audio")[7].play();
+        themNote("Không được rồi! Con thử nghĩ cách khác xem.", 4000)
+        phattieng(7)
         setTimeout(function() {
             $(".ray").toggleClass("chon-sai")
         }, 1200)
@@ -422,8 +435,8 @@ function datpheu(active) {
 
     } else {
         $(".pheu").toggleClass("chon-sai")
-        themNote("Không được rồi! Con thử nghĩ cách khác xem.")
-        $(".audio")[7].play();
+        themNote("Không được rồi! Con thử nghĩ cách khác xem.", 4000)
+        phattieng(7)
         setTimeout(function() {
             $(".pheu").toggleClass("chon-sai")
         }, 1200)
@@ -433,11 +446,11 @@ function datpheu(active) {
 
 }
 
-function themNote(note) {
+function themNote(note, time = 8000) {
     $(".note").text(note)
     setTimeout(function() {
         huongdan()
-    }, 8000)
+    }, time)
 }
 
 function datloc() {
@@ -447,13 +460,7 @@ function datloc() {
         } else {
             $(".giay-loc").toggleClass("loc-binh2")
         }
-    } else {
-        $(".giay-loc").toggleClass("chon-sai")
-        themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.")
-        setTimeout(function() {
-            $(".giay-loc").toggleClass("chon-sai")
-        }, 1200)
-    }
+    } 
 
 }
 
@@ -486,23 +493,28 @@ function huongdan() {
     if (state == 0) {
         setTimeout(function() {
             $(".note").text("Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
-            $(".audio")[17].play();
+            phattieng(17)
         }, 10000)
     } else if (state == 1) {
         $(".note").text("Trong nước có vụn nilon và cát. Theo con, chúng ta nên lọc tạp chất nào trước? Các con hãy nghĩ cách lọc tạp chất này ra khỏi nước. ")
-        $(".audio")[16].play();
-        setTimeout(function() {
-            $(".note").text("Con thử nghĩ xem, vụn nilon và cát, tạp chất nào có kích thước lớn hơn thì sẽ được lọc khỏi nước dễ dàng hơn.")
-            $(".audio")[15].play();
-        }, 15000)
+        phattieng(16) 
+         
+        // setTimeout(function() {
+        //     $(".note").text("Con thử nghĩ xem, vụn nilon và cát, tạp chất nào có kích thước lớn hơn thì sẽ được lọc khỏi nước dễ dàng hơn.")
+            
+        //     phattieng(15)
+        // }, 9000)
     } else if (state == 2) {
         $(".note").text("Bước tiếp theo là lọc cát ra khỏi nước, thử nghĩ xem bạn cần vật dụng gì nào")
-        $(".audio")[14].play();
+        
+        phattieng(14)
     } else if (state == 3) {
         $(".note").text("Để lọc sạch nước, chúng ta cần than hoạt tính, khi hòa lần vào nước, than sẽ lọc ra các hạt đát cát cực nhỏ")
-        $(".audio")[20].play();
+        
+        phattieng(20)
     } else if (state == 4) {
         $(".note").text("Cô gợi ý, các hạt than tinh thể có kích thước lớn hơn lỗ giấy lọc. Hãy lựa chọn dụng cụ thông minh để hoàn thành thí nghiệm này nhé.")
-        $(".audio")[2].play();
+        
+        phattieng(2)
     }
 }

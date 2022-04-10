@@ -177,6 +177,7 @@ function drag(ev) {
             if (checkdungcudangdung() !== "ray" && checkdungcudangdung() !== "giay") {
                 datpheu(true)
                 themNote("Chỉ có phễu thôi không đủ. Con cần thêm một vật dụng nữa để lọc nước.")
+                $(".audio")[19].play();
             } else {
                 datpheu(false)
             }
@@ -266,6 +267,7 @@ function dothanvaobinh(active) {
     } else {
         $(".than-hoat-tinh").toggleClass("chon-sai")
         themNote("Ý tưởng hay đấy! Nhưng con chỉ nên sử dụng than hoạt tính để khử màu cho nước khi không còn các tạp chất bẩn như đá và cát ở trong nước nữa. Con hãy nghĩ cách loại bỏ các chất bẩn ra khỏi nước nhé.")
+        $(".audio")[18].play();
         setTimeout(function() {
             $(".than-hoat-tinh").toggleClass("chon-sai")
         }, 1200)
@@ -484,16 +486,21 @@ function huongdan() {
     if (state == 0) {
         setTimeout(function() {
             $(".note").text("Bây giờ, chúng ta chỉ cần dọn dẹp phòng thí nghiệm sạch sẽ nữa thôi! ")
+            $(".audio")[17].play();
         }, 10000)
     } else if (state == 1) {
         $(".note").text("Trong nước có vụn nilon và cát. Theo con, chúng ta nên lọc tạp chất nào trước? Các con hãy nghĩ cách lọc tạp chất này ra khỏi nước. ")
+        $(".audio")[16].play();
         setTimeout(function() {
             $(".note").text("Con thử nghĩ xem, vụn nilon và cát, tạp chất nào có kích thước lớn hơn thì sẽ được lọc khỏi nước dễ dàng hơn.")
+            $(".audio")[15].play();
         }, 15000)
     } else if (state == 2) {
         $(".note").text("Bước tiếp theo là lọc cát ra khỏi nước, thử nghĩ xem bạn cần vật dụng gì nào")
+        $(".audio")[14].play();
     } else if (state == 3) {
         $(".note").text("Để lọc sạch nước, chúng ta cần than hoạt tính, khi hòa lần vào nước, than sẽ lọc ra các hạt đát cát cực nhỏ")
+        $(".audio")[20].play();
     } else if (state == 4) {
         $(".note").text("Cô gợi ý, các hạt than tinh thể có kích thước lớn hơn lỗ giấy lọc. Hãy lựa chọn dụng cụ thông minh để hoàn thành thí nghiệm này nhé.")
         $(".audio")[2].play();

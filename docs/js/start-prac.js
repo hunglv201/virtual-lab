@@ -448,9 +448,13 @@ function datpheu(active) {
 
 function themNote(note, time = 8000) {
     $(".note").text(note)
-    setTimeout(function() {
-        huongdan()
-    }, time)
+    // setTimeout(function() {
+    //     huongdan()
+    // }, time)
+}
+
+function xemhuongdan(){
+    huongdan()
 }
 
 function datloc() {

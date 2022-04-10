@@ -163,6 +163,15 @@
     .oj-scale-choose {
         transition: transform 0.2s ease 0s;
     }
+
+    .oj-scale-choose-small {
+        transition: transform 0.2s ease 0s;
+    }
+
+    .oj-scale-choose-small:hover {
+        cursor: pointer;
+        transform: scale(1.02) translateY(-10px);
+    }
     
     .oj-choose-pre {
         cursor: pointer;
@@ -257,6 +266,7 @@
         width: 22%;
         left: 30%;
         bottom: 22%;
+        filter: drop-shadow(4px 12px 12px rgba(0, 0, 0, 0.8));
     }
     
     .oj12 {
@@ -281,7 +291,7 @@
     .oj13 {
         width: 15%;
         bottom: 56%;
-        left: 33%;
+        left: 33.6%;
     }
     
     .oj16 {
@@ -480,7 +490,7 @@
         background-image: url(../images/13.svg);
         width: 135px;
         height: 64px;
-        bottom: 62%;
+        bottom: 65%;
         left: 17%;
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -561,12 +571,13 @@
     }
     
     .video-1 {
+        border-radius: 30px;
         width: 100%;
         height: auto;
         position: absolute;
         bottom: 24%;
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-        background-color: black;
+        background-color: #0a0b32;
         color: white;
         z-index: 3;
     }
@@ -585,6 +596,7 @@
         color: white;
         font-size: 20px;
         padding: 10px;
+        display: none;
     }
     
     .menu-video span {
@@ -633,16 +645,18 @@
     
     .oj30 {
         width: 6%;
+        margin-left: 10px;
     }
     
     .nd {
         font-size: 20px;
         border: 1px solid #f5dcdc;
-        background-color: #000000eb;
+        background-color: #0a0b32;
         padding: 10px;
         margin-left: 5px;
         border-radius: 10px;
         font-weight: 700;
+        margin-left: 4%;
     }
     
     .list-da {}
@@ -810,6 +824,21 @@
         max-width: 210px;
         word-break: break-word;
     }
+
+    .note-tl{
+        /* display: none; */
+        z-index: 10;
+        bottom: 35%;
+    }
+
+    .note-eqi-intro{
+        left: 56%;
+        max-width: 411px;
+        bottom: 9%;
+        display: none;
+        font-size: 18px;
+        justify-content: center;
+    }
     
     .ojHd {
         width: 100%;
@@ -914,7 +943,7 @@
     
     .oj40 {
         width: 20%;
-        left: 60%;
+        left: 70%;
         bottom: 50%;
     }
     
@@ -1075,7 +1104,7 @@
         box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px, rgb(0 0 0 / 5%) 0px 4px 6px -2px;
         top: 10%;
         position: absolute;
-        right: 40%;
+        right: 31%;
         font-size: 18px;
         max-width: 350px;
         word-break: break-word;

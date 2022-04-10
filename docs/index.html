@@ -26,7 +26,8 @@
                 <button class=" button-custom" role="button" onclick="goPrepare()">  BẮT ĐẦU</button>
                 <audio class="audio" id="myAudioElement" src="audio/index.m4a" controls autoplay style="display: none;"></audio>
             </div>
-            <img class="in-game icon-note" src="./images/5.svg" />
+            <img class="in-game icon-note" src="./images/5.svg" onclick="showinfo()"/>
+            <div class="note-eqi note-eqi-intro">Phòng thí nghiệm ảo V.L.A (Virtual Lab A) là một trang web chứa hệ thống các thí nghiệm ảo biểu diễn, chứng minh, mô tả lại các thí nghiệm, hiện tượng khoa học trong chương trình môn Khoa học lớp 4, mang lại cho người học trải nghiệm chân thực như được bước vào trung tâm thí nghiệm. Phòng thí nghiệm ảo V.L.A mang đến một phương pháp học hoàn toàn mới khi học sinh được chủ động tìm tòi, khám phá dưới sự dẫn dắt của Tiến sĩ A. Mỗi thí nghiệm là một cuộc câu chuyện, một hành trình, một trò chơi sáng tạo.</div>
         </div>
         <ul class="circles">
             <li></li>
@@ -66,6 +67,10 @@
         function phattieng(){
             $(".mute-icon").css("display", "none");
             $(".audio")[0].play();
+        }
+
+        function showinfo(){
+            $(".note-eqi-intro").toggleClass("display-block");
         }
     </script>
 

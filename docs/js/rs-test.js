@@ -52,18 +52,23 @@ function chooseDA(causos, da) {
     if (causos == 1) {
         if($(".nhanch1-oj32").hasClass("chon-da"))
             return
-        if (da == 1)
+        if (da == 1) {
+            tls()
             $(".nhanch1-oj32").toggleClass("chon-da")
+        }
         if (da == 2) {
+            tld()
             daDung = daDung + 1
             $(".nhanch1-oj33").toggleClass("chon-da")
         }
-        if (da == 3)
+        if (da == 3){
+            tls()
             $(".nhanch1-oj34").toggleClass("chon-da")
+        }
 
         setTimeout(function() {
             $(".rs-c1").css("opacity", 1);
-        }, 600)
+        }, 800)
 
         setTimeout(function() {
             $("#cau1").hide()
@@ -72,20 +77,27 @@ function chooseDA(causos, da) {
     } else if (causos == 2) {
         if($(".nhanch2-oj32").hasClass("chon-da"))
             return
-        if (da == 1)
+        if (da == 1) {
+            tls()
             $(".nhanch2-oj32").toggleClass("chon-da")
-        if (da == 2)
+        }
+        if (da == 2) {
+            tls()
             $(".nhanch2-oj33").toggleClass("chon-da")
+        }
         if (da == 3) {
+            tld()
             daDung = daDung + 1
             $(".nhanch2-oj34").toggleClass("chon-da")
         }
-        if (da == 4)
+        if (da == 4) {
+            tls()
             $(".nhanch2-oj35").toggleClass("chon-da")
+        }
 
         setTimeout(function() {
             $(".rs-c2").css("opacity", 1);
-        }, 600)
+        }, 800)
 
         setTimeout(function() {
             $("#cau2").hide()
@@ -94,20 +106,26 @@ function chooseDA(causos, da) {
     } else if (causos == 3) {
         if($(".nhanch3-oj32").hasClass("chon-da"))
             return
-        if (da == 1)
+        if (da == 1) {
+            tls()
             $(".nhanch3-oj32").toggleClass("chon-da")
+        }
         if (da == 2) {
+            tld()
             daDung = daDung + 1
             $(".nhanch3-oj33").toggleClass("chon-da")
         }
-        if (da == 3)
+        if (da == 3) {
+            tls()
             $(".nhanch3-oj34").toggleClass("chon-da")
-        if (da == 4)
+        }
+        if (da == 4){
+            tls()
             $(".nhanch3-oj35").toggleClass("chon-da")
-
+        }
         setTimeout(function() {
             $(".rs-c3").css("opacity", 1);
-        }, 600)
+        }, 800)
 
         setTimeout(function() {
             showKq()
@@ -117,6 +135,14 @@ function chooseDA(causos, da) {
             showKq()
         }, 2000)
     }
+}
+
+function tld(){
+    $(".audio")[0].play();
+}
+
+function tls(){
+    $(".audio")[1].play();
 }
 
 function hoanthanh() {

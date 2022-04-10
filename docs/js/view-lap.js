@@ -86,20 +86,35 @@ function chooseDA(da) {
     console.log("chon da")
     if (da == 1) {
         $(".oj32").toggleClass("chon-da")
+        chonsai()
     }
     if (da == 2) {
         $(".oj33").toggleClass("chon-da")
+        chonsai()
     }
     if (da == 3) {
         $(".oj34").toggleClass("chon-da")
+        chondung()
     }
     if (da == 4) {
         $(".oj35").toggleClass("chon-da")
+        chonsai()
     }
+}
+
+function chondung() {
     setTimeout(function() {
         $(".show-rs").css("opacity", 1);
-        $(".m4text").css("display", "block")
+        $(".m4textD").css("display", "block")
         $("#audio2")[0].play();
+    }, 600)
+}
+
+function chonsai(){
+    setTimeout(function() {
+        $(".show-rs").css("opacity", 1);
+        $(".m4textS").css("display", "block")
+        $("#audio3")[0].play();
     }, 600)
 }
 

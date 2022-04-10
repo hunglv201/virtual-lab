@@ -6,6 +6,7 @@ var state = 1; //chua giay, cat, ban   tb9-8  tb1
 // state = 4; //chua ban , than  tb9-5
 // state = 0 //sạch
 
+
 if (state == 1) {
     $(".binh1").attr("src", "./images/tb1.png")
     $(".binh2").attr("src", "./images/tb9-8.png")
@@ -240,6 +241,7 @@ setTimeout(function() {
 }, 0);
 
 function dothanvaobinh(active) {
+    $(".bao-ngoai").toggleClass("bao")
     if (active) {
         if (checkbinhrong() != "b1") {
             setTimeout(function() {
@@ -257,6 +259,7 @@ function dothanvaobinh(active) {
             $(".than-hoat-tinh").toggleClass("do-than-binh1")
             setTimeout(function() {
                 $(".than-hoat-tinh").toggleClass("do-than-binh1")
+                $(".bao-ngoai").toggleClass("bao")
             }, 4000)
         } else {
             setTimeout(function() {
@@ -274,6 +277,7 @@ function dothanvaobinh(active) {
             $(".than-hoat-tinh").toggleClass("do-than-binh2")
             setTimeout(function() {
                 $(".than-hoat-tinh").toggleClass("do-than-binh2")
+                $(".bao-ngoai").toggleClass("bao")
             }, 4000)
         }
 
@@ -283,12 +287,14 @@ function dothanvaobinh(active) {
         phattieng(18)
         setTimeout(function() {
             $(".than-hoat-tinh").toggleClass("chon-sai")
+            $(".bao-ngoai").toggleClass("bao")
         }, 1200)
     }
 
 }
 
 function binh1donuoc(active) {
+    $(".bao-ngoai").toggleClass("bao")
     if (active) {
         $(".binh1").toggleClass("do-binh-1")
         setTimeout(function() {
@@ -317,6 +323,7 @@ function binh1donuoc(active) {
                 }, 5000)
             }
             resetdungcu()
+            $(".bao-ngoai").toggleClass("bao")
         }, 4000)
 
 
@@ -324,12 +331,14 @@ function binh1donuoc(active) {
         $(".binh1").toggleClass("chon-sai")
         setTimeout(function() {
             $(".binh1").toggleClass("chon-sai")
+            $(".bao-ngoai").toggleClass("bao")
         }, 1200)
     }
 
 }
 
 function binh2donuoc(active) {
+    $(".bao-ngoai").toggleClass("bao")
     if (active) {
         $(".binh2").toggleClass("do-binh-2")
         setTimeout(function() {
@@ -358,11 +367,13 @@ function binh2donuoc(active) {
                 }, 5000)
             }
             resetdungcu()
+            $(".bao-ngoai").toggleClass("bao")
         }, 4000)
     } else {
         $(".binh2").toggleClass("chon-sai")
         setTimeout(function() {
             $(".binh2").toggleClass("chon-sai")
+            $(".bao-ngoai").toggleClass("bao")
         }, 1200)
     }
 
@@ -401,37 +412,45 @@ function checkdungcudangdung() {
 }
 
 function datdua() {
-
+    $(".bao-ngoai").toggleClass("bao")
     $(".dua").toggleClass("chon-sai")
     setTimeout(function() {
         $(".dua").toggleClass("chon-sai")
+        $(".bao-ngoai").toggleClass("bao")
     }, 1200)
 }
 
 function datray(active) {
+    $(".bao-ngoai").toggleClass("bao")
     if (active) {
         if (checkbinhrong() == "b1") {
             $(".ray").toggleClass("ray-binh1")
         } else {
             $(".ray").toggleClass("ray-binh2")
         }
+        $(".bao-ngoai").toggleClass("bao")
     } else {
         $(".ray").toggleClass("chon-sai")
         themNote("Không được rồi! Con thử nghĩ cách khác xem.", 4000)
         phattieng(7)
         setTimeout(function() {
             $(".ray").toggleClass("chon-sai")
+            $(".bao-ngoai").toggleClass("bao")
         }, 1200)
     }
 }
 
 function datpheu(active) {
+    $(".bao-ngoai").toggleClass("bao")
     if (active) {
         if (checkbinhrong() == "b1") {
             $(".pheu").toggleClass("pheu-binh1")
         } else {
             $(".pheu").toggleClass("pheu-binh2")
+            
         }
+
+        $(".bao-ngoai").toggleClass("bao")
 
     } else {
         $(".pheu").toggleClass("chon-sai")
@@ -439,6 +458,7 @@ function datpheu(active) {
         phattieng(7)
         setTimeout(function() {
             $(".pheu").toggleClass("chon-sai")
+            $(".bao-ngoai").toggleClass("bao")
         }, 1200)
     }
 
@@ -458,12 +478,15 @@ function xemhuongdan(){
 }
 
 function datloc() {
+    $(".bao-ngoai").toggleClass("bao")
     if (true) {
         if (checkbinhrong() == "b1") {
             $(".giay-loc").toggleClass("loc-binh1")
         } else {
             $(".giay-loc").toggleClass("loc-binh2")
         }
+
+        $(".bao-ngoai").toggleClass("bao")
     } 
 
 }
@@ -522,3 +545,7 @@ function huongdan() {
         phattieng(2)
     }
 }
+
+// setInterval(() => {
+//     $(".bao-ngoai").toggleClass("bao")
+// }, 5000);

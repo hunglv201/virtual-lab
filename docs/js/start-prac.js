@@ -15,13 +15,13 @@ if (state == 1) {
     $(".binh2").attr("src", "./images/tb9-9.png")
 } else if (state == 3) {
     $(".binh1").attr("src", "./images/tb1.png")
-    $(".binh2").attr("src", "./images/tb9-10.png")
+    $(".binh2").attr("src", "./images/tb9-10.jpeg")
 } else if (state == 4) {
     $(".binh1").attr("src", "./images/tb1.png")
     $(".binh2").attr("src", "./images/tb9-5.png")
 } else if (state == 0) {
     $(".binh1").attr("src", "./images/tb1.png")
-    $(".binh2").attr("src", "./images/tb9-10.png")
+    $(".binh2").attr("src", "./images/tb9-10.jpeg")
 }
 
 huongdan();
@@ -84,7 +84,7 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-giay2")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-giay2")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 8000)
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát đã chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 8000)
                             phattieng(0) 
                         }, 3000)
 
@@ -146,7 +146,7 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-cat1")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-cat1")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 4000)
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát đã chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 4000)
                             phattieng(0) 
                         }, 3000)
 
@@ -313,9 +313,9 @@ function binh1donuoc(active) {
                 $(".binh2").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh1").attr("src", "./images/tb1.png")
-                $(".binh2").attr("src", "./images/tb9-10.png")
+                $(".binh2").attr("src", "./images/tb9-10.jpeg")
                 setTimeout(function() {
-                    themNote("Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
+                    themNote("Thành công rồi! Nước đã sạch sẽ trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch sẽ rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
                     phattieng(11)
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
@@ -357,9 +357,9 @@ function binh2donuoc(active) {
                 $(".binh1").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh2").attr("src", "./images/tb1.png")
-                $(".binh1").attr("src", "./images/tb9-10.png")
+                $(".binh1").attr("src", "./images/tb9-10.jpeg")
                 setTimeout(function() {
-                    themNote("Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
+                    themNote("Thành công rồi! Nước đã sạch sẽ trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch sẽ rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
                     phattieng(11)
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
@@ -536,7 +536,7 @@ function huongdan() {
         
         phattieng(14)
     } else if (state == 3) {
-        $(".note").text("Để lọc sạch nước, chúng ta cần than hoạt tính, khi hòa lần vào nước, than sẽ lọc ra các hạt đát cát cực nhỏ")
+        $(".note").text("Để lọc sạch nước, chúng ta cần than hoạt tính. Khi hoà lẫn vào nước, than sẽ lọc được các hạt tạp chất cực nhỏ và khử màu cho nước.")
         
         phattieng(20)
     } else if (state == 4) {

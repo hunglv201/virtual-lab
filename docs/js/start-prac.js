@@ -15,13 +15,13 @@ if (state == 1) {
     $(".binh2").attr("src", "./images/tb9-9.png")
 } else if (state == 3) {
     $(".binh1").attr("src", "./images/tb1.png")
-    $(".binh2").attr("src", "./images/tb9-10.jpeg")
+    $(".binh2").attr("src", "./images/tb9-10.png")
 } else if (state == 4) {
     $(".binh1").attr("src", "./images/tb1.png")
     $(".binh2").attr("src", "./images/tb9-5.png")
 } else if (state == 0) {
     $(".binh1").attr("src", "./images/tb1.png")
-    $(".binh2").attr("src", "./images/tb9-10.jpeg")
+    $(".binh2").attr("src", "./images/tb9-10.png")
 }
 
 huongdan();
@@ -313,7 +313,7 @@ function binh1donuoc(active) {
                 $(".binh2").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh1").attr("src", "./images/tb1.png")
-                $(".binh2").attr("src", "./images/tb9-10.jpeg")
+                $(".binh2").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
                     themNote("Thành công rồi! Nước đã sạch sẽ trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch sẽ rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
                     phattieng(11)
@@ -357,7 +357,7 @@ function binh2donuoc(active) {
                 $(".binh1").attr("src", "./images/tb9-12.png")
             } else if (state == 0) {
                 $(".binh2").attr("src", "./images/tb1.png")
-                $(".binh1").attr("src", "./images/tb9-10.jpeg")
+                $(".binh1").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
                     themNote("Thành công rồi! Nước đã sạch sẽ trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch sẽ rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
                     phattieng(11)

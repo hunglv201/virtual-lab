@@ -532,7 +532,7 @@ function huongdan() {
         //     phattieng(15)
         // }, 9000)
     } else if (state == 2) {
-        $(".note").text("Bước tiếp theo là lọc cát ra khỏi nước, thử nghĩ xem bạn cần vật dụng gì nào")
+        $(".note").text("Bước tiếp theo là lọc cát ra khỏi nước, thử nghĩ xem con cần vật dụng gì nào")
         
         phattieng(14)
     } else if (state == 3) {

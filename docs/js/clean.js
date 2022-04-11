@@ -7,8 +7,8 @@ setTimeout(function() {
 function themNote(note) {
     $(".note").text(note)
     setTimeout(function() {
-        $(".note").text("...")
-    }, 2000)
+        // $(".note").text("...")
+    }, 8000)
 }
 
 function goListLap() {

@@ -201,7 +201,7 @@ function drag(ev) {
     } else if (idTB == "giay-loc") {
         if (checkdungcudangdung() == "ray") {
             themNote("Không được rồi! Con thử nghĩ cách khác xem.", 4000)
-            phattieng(8) 
+            phattieng(7) 
         } else {
             datloc()
         }

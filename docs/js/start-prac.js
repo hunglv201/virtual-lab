@@ -73,7 +73,7 @@ function drag(ev) {
                         $("#giay-loc").css("opacity", 1)
                     }, 8000)
                     themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.", 4000)
-                    phattieng(1) 
+                    phattieng(5) 
                     $("#giay-loc").css("opacity", 0)
                 }, 4000)
             }
@@ -84,7 +84,7 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-giay2")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-giay2")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 8000)
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 8000)
                             phattieng(0) 
                         }, 3000)
 
@@ -99,7 +99,7 @@ function drag(ev) {
                         setTimeout(function() {
                             $("#nuoc-tran").removeClass("nuoc-tran2")
                             themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?", 8000)
-                            phattieng(5) 
+                            phattieng(21) 
                         }, 3000)
 
                     }, 3000)
@@ -135,7 +135,7 @@ function drag(ev) {
                         $("#giay-loc").css("opacity", 1)
                     }, 8000)
                     themNote("Không được rồi! Giấy bị dính nước sẽ mềm nên trượt vào cốc. Con cần tìm một dụng cụ nào đó để đỡ giấy lọc.", 4000)
-                    phattieng(1) 
+                    phattieng(5) 
                     $("#giay-loc").css("opacity", 0)
                 }, 4000)
             }
@@ -146,7 +146,7 @@ function drag(ev) {
                         $("#vun-giay").addClass("hien-vun-cat1")
                         setTimeout(function() {
                             $("#vun-giay").removeClass("hien-vun-cat1")
-                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại- Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 4000)
+                            themNote("Tuyệt vời, vụn nilon đã được giữ lại trên rây do lớn hơn lỗ rây nên bị kẹt lại. Nhưng nước, cát lại chảy xuyên qua lỗ rây. Các con hãy thử nghĩ cách để lọc cát ra khỏi nước nhé", 4000)
                             phattieng(0) 
                         }, 3000)
 
@@ -161,7 +161,7 @@ function drag(ev) {
                         setTimeout(function() {
                             $("#nuoc-tran").removeClass("nuoc-tran1")
                             themNote("Không được rồi! Vụn nilon đã bịt mất các lỗ nhỏ trên giấy lọc nên nước đã bị tràn ra ngoài! Ta phải tách vụn nilon ra khỏi nước trước. Có cách nào để lọc bỏ các vụn nilon không?", 4000)
-                            phattieng(7) 
+                            phattieng(21) 
                         }, 3000)
 
                     }, 2000)
@@ -251,7 +251,7 @@ function dothanvaobinh(active) {
                     $(".binh2").attr("src", "./images/tb1.png")
                     $(".binh1").attr("src", "./images/tb9-12.png")
                     state = 4
-                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
+                    themNote("Than hoạt tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
                     phattieng(10) 
                 }, 3000)
 
@@ -269,7 +269,7 @@ function dothanvaobinh(active) {
                     $(".binh1").attr("src", "./images/tb1.png")
                     $(".binh2").attr("src", "./images/tb9-12.png")
                     state = 4
-                    themNote("Than hoạt  tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
+                    themNote("Than hoạt tính có tác dụng lọc màu và khử cả được mùi cho nước đấy con ạ. Tuy nhiên, nước hiện tại vẫn đang có màu xám do than hoạt tính. Con hãy tìm cách lọc than hoạt tính ra khỏi nước để nước trong trở lại nhé! ", 14000)
                     phattieng(10) 
                 }, 3000)
 
@@ -315,7 +315,7 @@ function binh1donuoc(active) {
                 $(".binh1").attr("src", "./images/tb1.png")
                 $(".binh2").attr("src", "./images/tb9-10.png")
                 setTimeout(function() {
-                    themNote("- Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
+                    themNote("Thành công rồi! Nước đã sạch trở lại. Con đã hoàn thành xuất sắc giúp bạn nước trở nên sạch rồi đấy. Tuy nhiên, cách lọc này chỉ loại bỏ được một số chất không tan trong nước. Các con cần đun sôi nước trước khi uống để tiêu diệt được hết các vi khuẩn và loại bỏ các chất độc còn tồn tại trong nước.", 20000)
                     phattieng(11)
                     $(".dungcu").css("opacity", "0")
                     $(".hp").css("display", "block")
